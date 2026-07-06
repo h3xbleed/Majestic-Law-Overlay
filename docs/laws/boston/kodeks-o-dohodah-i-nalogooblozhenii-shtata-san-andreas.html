@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -185,7 +189,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Глава III. Порядок и оформление</h2>
 <article class="art" id="a-20">
   <div class="h"><a class="num" href="#a-20">20</a><span class="t">Порядок проверки предприятия</span></div>
-  <div class="body">Проведением проверки предприятия, которая состоит из:<span class="bsub"><i>1.</i><span>Проведение проверки от Министерства Финансов.</span></span><span class="bsub"><i>2.</i><span>Соответствие состава предприятия заявленному реестру.</span></span><span class="bsub"><i>3.</i><span>Соответствие зарегистрированного типа предприятия реальному виду деятельности.</span></span><span class="bsub"><i>4.</i><span>Защита и безопасность труда.</span></span><span class="bsub"><i>5.</i><span>Уплата сбора за оформление лицензии.</span></span><span class="bsub"><i>6.</i><span>Выдача лицензии и публикация на портале штата.</span></span></div>
+  <div class="body">Проведением проверки предприятия, которая состоит из:<span class="bsub bsub-item"><i>1.</i><span>Проведение проверки от Министерства Финансов.</span></span><span class="bsub bsub-item"><i>2.</i><span>Соответствие состава предприятия заявленному реестру.</span></span><span class="bsub bsub-item"><i>3.</i><span>Соответствие зарегистрированного типа предприятия реальному виду деятельности.</span></span><span class="bsub bsub-item"><i>4.</i><span>Защита и безопасность труда.</span></span><span class="bsub bsub-item"><i>5.</i><span>Уплата сбора за оформление лицензии.</span></span><span class="bsub bsub-item"><i>6.</i><span>Выдача лицензии и публикация на портале штата.</span></span></div>
 </article></section><section class="chapter"><h2>Глава IV. Налоговое положение</h2>
 <article class="art" id="a-21">
   <div class="h"><a class="num" href="#a-21">21</a><span class="t">Штраф за несвоевременную уплату</span><span class="san"><span class="c-fine">100$</span></span></div>
@@ -333,7 +337,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-55">
   <div class="h"><a class="num" href="#a-55">55</a><span class="t">Прекращение проверки комиссией EMS</span></div>
-  <div class="body">Проверяющая комиссия от EMS вправе прекратить проверку, с выставлением неудовлетворительной оценки организации в случаях если:<span class="bsub"><i>-</i><span>### Есть прямая угроза жизни для проверяющей комиссии от EMS от сотрудников проверяемой организации.</span></span><span class="bsub"><i>-</i><span>### Старший состав организации отсутствует в течении 5 минут от запланированного времени проверки.</span></span><span class="bsub"><i>-</i><span>### В адрес EMS идут какие-либо угрозы со стороны сотрудников организации.</span></span><span class="bsub"><i>-</i><span>### Участники организации пытаются морально или психически надавить надавить на сотрудников EMS, чтобы каким-либо образом изменить результат проверки санитарных норм.</span></span><span class="bsub"><i>-</i><span>### На проверке присутствует меньше 6 сотрудников от организации.</span></span></div>
+  <div class="body">Проверяющая комиссия от EMS вправе прекратить проверку, с выставлением неудовлетворительной оценки организации в случаях если:<span class="bsub bsub-item"><i>-</i><span>### Есть прямая угроза жизни для проверяющей комиссии от EMS от сотрудников проверяемой организации.</span></span><span class="bsub bsub-item"><i>-</i><span>### Старший состав организации отсутствует в течении 5 минут от запланированного времени проверки.</span></span><span class="bsub bsub-item"><i>-</i><span>### В адрес EMS идут какие-либо угрозы со стороны сотрудников организации.</span></span><span class="bsub bsub-item"><i>-</i><span>### Участники организации пытаются морально или психически надавить надавить на сотрудников EMS, чтобы каким-либо образом изменить результат проверки санитарных норм.</span></span><span class="bsub bsub-item"><i>-</i><span>### На проверке присутствует меньше 6 сотрудников от организации.</span></span></div>
 </article></section><section class="chapter">
 <article class="art" id="a-56">
   <div class="h"><a class="num" href="#a-56">56</a><span class="t">График плановых проверок Минфина</span></div>

@@ -30,9 +30,10 @@
       if ((m = line.match(/^\s*\*{0,3}(Примечание|Исключение|Важно)\s*[:.](.*)$/i))) {
         flush();
         out.push(`<span class="a-note"><b>${m[1]}</b>: ${inline(esc(m[2].replace(/\*+$/, '').trim()))}</span>`);
-      } else if ((m = line.match(/^\s*(ч\.\s*\d+(?:\.\d+)?|п\.\s*\d+(?:\.\d+)?|[а-яa-z]\)|\d{1,2}[.)]|[-–•])\s+(.+)$/i))) {
+      } else if ((m = line.match(/^\s*(ч\.\s*\d+(?:\.\d+)?|п\.\s*\d+(?:\.\d+)?|\([а-яa-z0-9]{1,3}\)|[а-яa-z]\)|\d{1,2}[.)]|[-–•])\s+(.+)$/i))) {
         flush();
-        out.push(`<span class="sub"><i class="sub-m">${esc(m[1])}</i><span>${inline(esc(m[2]))}</span></span>`);
+        const isPart = /^[чп]\./i.test(m[1]);
+        out.push(`<span class="sub ${isPart ? 'sub-part' : 'sub-item'}"><i class="sub-m">${esc(m[1])}</i><span>${inline(esc(m[2]))}</span></span>`);
       } else {
         buf.push(line);
       }

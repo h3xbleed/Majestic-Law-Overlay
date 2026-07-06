@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -87,7 +91,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <section class="chapter"><h2>Глава I. Основы</h2>
 <article class="art" id="a-1">
   <div class="h"><a class="num" href="#a-1">1</a><span class="t">Основы защиты животных</span></div>
-  <div class="body">Основой данного закона является отношения в области обращения с животными в целях защиты животных, а также укрепления нравственности, соблюдения принципов гуманности, обеспечения безопасности и иных прав и законных интересов граждан при обращении с животными, таких как:<span class="bsub"><i>-</i><span>### Домашние животные, включающие в себя домашний скот;</span></span><span class="bsub"><i>-</i><span>### Служебные животные;</span></span><span class="bsub"><i>-</i><span>### Дикие животные (все, что не является домашним или служебным питомцем);</span></span></div>
+  <div class="body">Основой данного закона является отношения в области обращения с животными в целях защиты животных, а также укрепления нравственности, соблюдения принципов гуманности, обеспечения безопасности и иных прав и законных интересов граждан при обращении с животными, таких как:<span class="bsub bsub-item"><i>-</i><span>### Домашние животные, включающие в себя домашний скот;</span></span><span class="bsub bsub-item"><i>-</i><span>### Служебные животные;</span></span><span class="bsub bsub-item"><i>-</i><span>### Дикие животные (все, что не является домашним или служебным питомцем);</span></span></div>
 </article>
 <article class="art" id="a-2">
   <div class="h"><a class="num" href="#a-2">2</a><span class="t">Владелец животного</span></div>
@@ -123,7 +127,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Вакцинация животных</span><span class="san"><span class="c-fine">25к$</span></span></div>
-  <div class="body">Проводить вакцинацию от заболеваний:<span class="bsub"><i>-</i><span>### Для домашних животных - раз в 2 недели.</span></span><span class="bsub"><i>-</i><span>### Для служебных собак - не реже 1 раза в неделю.</span></span><span class="pen">Наказание: штраф в размере 25.000$.</span></div>
+  <div class="body">Проводить вакцинацию от заболеваний:<span class="bsub bsub-item"><i>-</i><span>### Для домашних животных - раз в 2 недели.</span></span><span class="bsub bsub-item"><i>-</i><span>### Для служебных собак - не реже 1 раза в неделю.</span></span><span class="pen">Наказание: штраф в размере 25.000$.</span></div>
 </article>
 <article class="art" id="a-10">
   <div class="h"><a class="num" href="#a-10">10</a><span class="t">Отдых после вакцинации</span></div>
@@ -135,7 +139,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-12">
   <div class="h"><a class="num" href="#a-12">12</a><span class="t">Задачи служебных собак</span></div>
-  <div class="body">Основными задачами К9 являются:<span class="bsub"><i>-</i><span>### Участие в контртеррористических операциях.</span></span><span class="bsub"><i>-</i><span>### Поиск следов и улик преступления.</span></span><span class="bsub"><i>-</i><span>### Поиск нелегальных веществ во время обысков.</span></span><span class="bsub"><i>-</i><span>### Участие в поисках без вести пропавших людей, а также заложников при спецоперациях.</span></span></div>
+  <div class="body">Основными задачами К9 являются:<span class="bsub bsub-item"><i>-</i><span>### Участие в контртеррористических операциях.</span></span><span class="bsub bsub-item"><i>-</i><span>### Поиск следов и улик преступления.</span></span><span class="bsub bsub-item"><i>-</i><span>### Поиск нелегальных веществ во время обысков.</span></span><span class="bsub bsub-item"><i>-</i><span>### Участие в поисках без вести пропавших людей, а также заложников при спецоперациях.</span></span></div>
 </article>
 <article class="art" id="a-13">
   <div class="h"><a class="num" href="#a-13">13</a><span class="t">Обучение служебных собак</span></div>
@@ -143,7 +147,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-14">
   <div class="h"><a class="num" href="#a-14">14</a><span class="t">Обязанности служебных собак</span></div>
-  <div class="body">Обязанности Служебных Собак:<span class="bsub"><i>-</i><span>### Повиноваться командам кинологов.</span></span><span class="bsub"><i>-</i><span>### Оказывать поддержку в выявлении и пресечении террористических актов.</span></span><span class="bsub"><i>-</i><span>### Помогать отрядам государственного наркоконтроля в нахождении хранилищ и складов с наркотическими средствами.</span></span><span class="bsub"><i>-</i><span>### Способствовать нахождению нелегальных веществ у преступников.</span></span><span class="bsub"><i>-</i><span>### При надобности содействовать сотрудникам лабораторий проводящих экспертизы, по выявлению наркотических веществ.</span></span><span class="bsub"><i>-</i><span>### Оказывать помощь специальным службам по поиску без вести пропавших людей.</span></span></div>
+  <div class="body">Обязанности Служебных Собак:<span class="bsub bsub-item"><i>-</i><span>### Повиноваться командам кинологов.</span></span><span class="bsub bsub-item"><i>-</i><span>### Оказывать поддержку в выявлении и пресечении террористических актов.</span></span><span class="bsub bsub-item"><i>-</i><span>### Помогать отрядам государственного наркоконтроля в нахождении хранилищ и складов с наркотическими средствами.</span></span><span class="bsub bsub-item"><i>-</i><span>### Способствовать нахождению нелегальных веществ у преступников.</span></span><span class="bsub bsub-item"><i>-</i><span>### При надобности содействовать сотрудникам лабораторий проводящих экспертизы, по выявлению наркотических веществ.</span></span><span class="bsub bsub-item"><i>-</i><span>### Оказывать помощь специальным службам по поиску без вести пропавших людей.</span></span></div>
 </article>
 <article class="art" id="a-15">
   <div class="h"><a class="num" href="#a-15">15</a><span class="t">Статус служебных собак K9</span></div>
@@ -182,7 +186,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 Зона запрета рыбного промысла — это территория или акватория, где ведение рыболовства запрещено на законодательном уровне. Запрет на рыбалку со стороны штата может быть введен с целью защиты исчезающих видов рыб, восстановления популяции рыб или защиты их нерестилищ.
 21.5
 “Красная книга” - это официальный список, в который включаются виды животных и растений, находящиеся под угрозой исчезновения. Красная книга помогает определить степень угрозы исчезновения для вида и регламентирует меры для поддержания и восстановления популяции.
-На данный момент в “красной книге” определены три вида рыбы как критически уязвимые, популяция которых стремительно сокращается, а именно:<span class="bsub"><i>1.</i><span>Сериола</span></span><span class="bsub"><i>2.</i><span>Рустер</span></span><span class="bsub"><i>3.</i><span>Стерлядь</span></span><span class="bsub"><i>4.</i><span>Токсичный окунь;</span></span><span class="bsub"><i>5.</i><span>Древняя гинерия.</span></span>21.6
+На данный момент в “красной книге” определены три вида рыбы как критически уязвимые, популяция которых стремительно сокращается, а именно:<span class="bsub bsub-item"><i>1.</i><span>Сериола</span></span><span class="bsub bsub-item"><i>2.</i><span>Рустер</span></span><span class="bsub bsub-item"><i>3.</i><span>Стерлядь</span></span><span class="bsub bsub-item"><i>4.</i><span>Токсичный окунь;</span></span><span class="bsub bsub-item"><i>5.</i><span>Древняя гинерия.</span></span>21.6
 Исчезающий вид - животное либо растение, содержащееся в “красной книге”, на потенциальное исчезновение из природы которого обращено внимание штата с целью восстановления популяции.
 21.7
 Запрет на добычу исчезающих видов, а также иных продуктов, получаемых из исчезающих видов является мерой охраны природы, направленной на защиту видов, которые находятся под угрозой исчезновения или в состоянии критического сокращения численности популяции, стремящейся к нулю.</div>
@@ -206,7 +210,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-23.3">
   <div class="h"><a class="num" href="#a-23.3">23.3</a><span class="t">Лицензии для охотников</span></div>
-  <div class="body">Для осуществления охоты гражданин обязан иметь:<span class="bsub"><i>-</i><span>### Действующую лицензию CDWL;</span></span><span class="bsub"><i>-</i><span>### Действующую лицензию HUNTING;</span></span><span class="bsub"><i>-</i><span>### Действующие медицинские справки.</span></span></div>
+  <div class="body">Для осуществления охоты гражданин обязан иметь:<span class="bsub bsub-item"><i>-</i><span>### Действующую лицензию CDWL;</span></span><span class="bsub bsub-item"><i>-</i><span>### Действующую лицензию HUNTING;</span></span><span class="bsub bsub-item"><i>-</i><span>### Действующие медицинские справки.</span></span></div>
 </article>
 <article class="art" id="a-23.4">
   <div class="h"><a class="num" href="#a-23.4">23.4</a><span class="t">Виды животных для охоты</span></div>

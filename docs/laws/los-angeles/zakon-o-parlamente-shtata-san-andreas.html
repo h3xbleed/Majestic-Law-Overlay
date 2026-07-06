@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -91,7 +95,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-2">
   <div class="h"><a class="num" href="#a-2">2</a><span class="t">Терминология парламентского процесса</span></div>
-  <div class="body">Терминология:<span class="bsub"><i>1.</i><span>Парламентская сессия (Пленум или Созыв) — официальная встреча членов законодательного органа для рассмотрения законопроектов и решения государственных вопросов.</span></span><span class="bsub"><i>2.</i><span>Депутатский мандат (Мандат) — право на участие и голосование в пленуме.</span></span><span class="bsub"><i>3.</i><span>Депутат Парламента (Депутат) — лицо, обладающее депутатским мандатом.</span></span><span class="bsub"><i>4.</i><span>Спикер Парламента (Спикер) — Глава Парламента, организующий заседания, контролирующий порядок и соблюдение регламента проведения Парламентской сессии.</span></span><span class="bsub"><i>5.</i><span>Законодательная инициатива — право внесения законопроекта, законодательного предложения или поправки к действующему законодательству штата Сан-Андреас на рассмотрение Парламента в порядке, установленном Конституцией и настоящим Законом. Законодательная инициатива может быть подана депутатом Парламента, Парламентом как коллегиальным органом, а также гражданином штата Сан-Андреас путем обращения к депутату либо путем направления законодательного предложения Спикеру Парламента через официальный портал штата.</span></span></div>
+  <div class="body">Терминология:<span class="bsub bsub-item"><i>1.</i><span>Парламентская сессия (Пленум или Созыв) — официальная встреча членов законодательного органа для рассмотрения законопроектов и решения государственных вопросов.</span></span><span class="bsub bsub-item"><i>2.</i><span>Депутатский мандат (Мандат) — право на участие и голосование в пленуме.</span></span><span class="bsub bsub-item"><i>3.</i><span>Депутат Парламента (Депутат) — лицо, обладающее депутатским мандатом.</span></span><span class="bsub bsub-item"><i>4.</i><span>Спикер Парламента (Спикер) — Глава Парламента, организующий заседания, контролирующий порядок и соблюдение регламента проведения Парламентской сессии.</span></span><span class="bsub bsub-item"><i>5.</i><span>Законодательная инициатива — право внесения законопроекта, законодательного предложения или поправки к действующему законодательству штата Сан-Андреас на рассмотрение Парламента в порядке, установленном Конституцией и настоящим Законом. Законодательная инициатива может быть подана депутатом Парламента, Парламентом как коллегиальным органом, а также гражданином штата Сан-Андреас путем обращения к депутату либо путем направления законодательного предложения Спикеру Парламента через официальный портал штата.</span></span></div>
 </article>
 <article class="art" id="a-3">
   <div class="h"><a class="num" href="#a-3">3</a><span class="t">Легитимность пленума</span></div>
@@ -107,7 +111,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Глава II. Формирование Парламента</h2>
 <article class="art" id="a-6">
   <div class="h"><a class="num" href="#a-6">6</a><span class="t">Формирование депутатского корпуса</span></div>
-  <div class="body">Лица, имеющие депутатский мандат:<span class="bsub"><i>1.</i><span>Министры всех министерств или их заместители штата Сан-Андреас (При этом на министерство выдаётся только 1 мандат);</span></span><span class="bsub"><i>2.</i><span>Представитель государственной структуры назначенный руководством организации - на каждую государственную структуру выдаётся только 1 мандат.</span></span><span class="bsub"><i>3.</i><span>Все государственные структуры имеют право направлять своего представителя для участия в работе парламента; участник от каждой структуры утверждается спикером парламента.</span></span><span class="bsub"><i>4.</i><span>Политические партии, допущенные Федеральным правительством.</span></span></div>
+  <div class="body">Лица, имеющие депутатский мандат:<span class="bsub bsub-item"><i>1.</i><span>Министры всех министерств или их заместители штата Сан-Андреас (При этом на министерство выдаётся только 1 мандат);</span></span><span class="bsub bsub-item"><i>2.</i><span>Представитель государственной структуры назначенный руководством организации - на каждую государственную структуру выдаётся только 1 мандат.</span></span><span class="bsub bsub-item"><i>3.</i><span>Все государственные структуры имеют право направлять своего представителя для участия в работе парламента; участник от каждой структуры утверждается спикером парламента.</span></span><span class="bsub bsub-item"><i>4.</i><span>Политические партии, допущенные Федеральным правительством.</span></span></div>
 </article>
 <article class="art" id="a-7">
   <div class="h"><a class="num" href="#a-7">7</a><span class="t">Назначение и освобождение Спикера</span></div>
@@ -115,15 +119,15 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Глава III. Полномочия и обязанности парламента</h2>
 <article class="art" id="a-8">
   <div class="h"><a class="num" href="#a-8">8</a><span class="t">Полномочия Парламента</span></div>
-  <div class="body">Полномочия Парламента:<span class="bsub"><i>-</i><span>Принятие и рассмотрение законов штата;</span></span><span class="bsub"><i>-</i><span>Контроль исполнения законов и постановлений;</span></span><span class="bsub"><i>-</i><span>Рассмотрение чрезвычайных ситуаций и предложение мер по их урегулированию;</span></span><span class="bsub"><i>-</i><span>Подавать законопроекты на рассмотрения Парламента;</span></span><span class="bsub"><i>-</i><span>Рассмотрение вопросов амнистии от уголовного преследования в отношении первых лиц штата Сан-Андреас.</span></span></div>
+  <div class="body">Полномочия Парламента:<span class="bsub bsub-item"><i>-</i><span>Принятие и рассмотрение законов штата;</span></span><span class="bsub bsub-item"><i>-</i><span>Контроль исполнения законов и постановлений;</span></span><span class="bsub bsub-item"><i>-</i><span>Рассмотрение чрезвычайных ситуаций и предложение мер по их урегулированию;</span></span><span class="bsub bsub-item"><i>-</i><span>Подавать законопроекты на рассмотрения Парламента;</span></span><span class="bsub bsub-item"><i>-</i><span>Рассмотрение вопросов амнистии от уголовного преследования в отношении первых лиц штата Сан-Андреас.</span></span></div>
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Обязанности депутатов</span></div>
-  <div class="body">Обязанности Депутатов:<span class="bsub"><i>-</i><span>Участвовать в заседаниях;</span></span><span class="bsub"><i>-</i><span>Голосовать «за» или «против» законопроектов, аргументируя свою позицию;</span></span><span class="bsub"><i>-</i><span>Соблюдать действующее законодательство штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Поддерживать интересы штата Сан-Андреас и его жителей;</span></span><span class="bsub"><i>-</i><span>Информировать граждан штата Сан-Андреас о результатах работы по законодательным инициативам;</span></span><span class="bsub"><i>-</i><span>Проявлять уважение к депутатам, не перебивать их, и давать право высказаться.</span></span></div>
+  <div class="body">Обязанности Депутатов:<span class="bsub bsub-item"><i>-</i><span>Участвовать в заседаниях;</span></span><span class="bsub bsub-item"><i>-</i><span>Голосовать «за» или «против» законопроектов, аргументируя свою позицию;</span></span><span class="bsub bsub-item"><i>-</i><span>Соблюдать действующее законодательство штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Поддерживать интересы штата Сан-Андреас и его жителей;</span></span><span class="bsub bsub-item"><i>-</i><span>Информировать граждан штата Сан-Андреас о результатах работы по законодательным инициативам;</span></span><span class="bsub bsub-item"><i>-</i><span>Проявлять уважение к депутатам, не перебивать их, и давать право высказаться.</span></span></div>
 </article>
 <article class="art" id="a-10">
   <div class="h"><a class="num" href="#a-10">10</a><span class="t">Полномочия Спикера Парламента</span></div>
-  <div class="body">Полномочия Спикера:<span class="bsub"><i>-</i><span>Подавать законопроекты на рассмотрения парламента;</span></span><span class="bsub"><i>-</i><span>Издавать нормативно-правовые акты от лица Парламента;</span></span><span class="bsub"><i>-</i><span>Представлять интересы Парламента перед другими ветвями власти;</span></span><span class="bsub"><i>-</i><span>Определять порядок рассмотрения законопроектов;</span></span><span class="bsub"><i>-</i><span>Толковать законы до судебного решения;</span></span><span class="bsub"><i>-</i><span>Исключать нарушителей с заседаний;</span></span><span class="bsub"><i>-</i><span>Определять допустимость участия приглашенных лиц.</span></span></div>
+  <div class="body">Полномочия Спикера:<span class="bsub bsub-item"><i>-</i><span>Подавать законопроекты на рассмотрения парламента;</span></span><span class="bsub bsub-item"><i>-</i><span>Издавать нормативно-правовые акты от лица Парламента;</span></span><span class="bsub bsub-item"><i>-</i><span>Представлять интересы Парламента перед другими ветвями власти;</span></span><span class="bsub bsub-item"><i>-</i><span>Определять порядок рассмотрения законопроектов;</span></span><span class="bsub bsub-item"><i>-</i><span>Толковать законы до судебного решения;</span></span><span class="bsub bsub-item"><i>-</i><span>Исключать нарушителей с заседаний;</span></span><span class="bsub bsub-item"><i>-</i><span>Определять допустимость участия приглашенных лиц.</span></span></div>
 </article>
 <article class="art" id="a-11">
   <div class="h"><a class="num" href="#a-11">11</a><span class="t">Механизм наложения вето</span></div>
@@ -131,11 +135,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-12">
   <div class="h"><a class="num" href="#a-12">12</a><span class="t">Субъекты права вето</span></div>
-  <div class="body">Право наложения вето имеют:<span class="bsub"><i>-</i><span>Губернатор штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Вице-Губернатор штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Председатель Верховного суда штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Спикер Парламента штата Сан-Андреас.</span></span></div>
+  <div class="body">Право наложения вето имеют:<span class="bsub bsub-item"><i>-</i><span>Губернатор штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Вице-Губернатор штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Председатель Верховного суда штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Спикер Парламента штата Сан-Андреас.</span></span></div>
 </article>
 <article class="art" id="a-13">
   <div class="h"><a class="num" href="#a-13">13</a><span class="t">Причины наложения вето на законопроект</span></div>
-  <div class="body">Причины для наложения права вето:<span class="bsub"><i>-</i><span>Законопроект создает коллизию в действующей законодательной базе штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Законопроект противоречит действующей Конституции штата Сан-Андреас.</span></span><span class="bsub"><i>-</i><span>Нанесение законопроектом вреда гражданам, экономике или государственным структурам;</span></span><span class="bsub"><i>-</i><span>Законопроект содержит множество орфографических и/или пунктуационных ошибок в своем содержании;</span></span><span class="bsub"><i>-</i><span>Содержание законопроектом нарушения этических норм.</span></span></div>
+  <div class="body">Причины для наложения права вето:<span class="bsub bsub-item"><i>-</i><span>Законопроект создает коллизию в действующей законодательной базе штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Законопроект противоречит действующей Конституции штата Сан-Андреас.</span></span><span class="bsub bsub-item"><i>-</i><span>Нанесение законопроектом вреда гражданам, экономике или государственным структурам;</span></span><span class="bsub bsub-item"><i>-</i><span>Законопроект содержит множество орфографических и/или пунктуационных ошибок в своем содержании;</span></span><span class="bsub bsub-item"><i>-</i><span>Содержание законопроектом нарушения этических норм.</span></span></div>
 </article>
 <article class="art" id="a-14">
   <div class="h"><a class="num" href="#a-14">14</a><span class="t">Роспуск парламента</span></div>
@@ -143,7 +147,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-15">
   <div class="h"><a class="num" href="#a-15">15</a><span class="t">Основания для роспуска парламента</span></div>
-  <div class="body">Причины для роспуска парламента:<span class="bsub"><i>-</i><span>Смена действующего Губернатора штата;</span></span><span class="bsub"><i>-</i><span>Невозможность парламента осуществлять свои полномочия;</span></span><span class="bsub"><i>-</i><span>Многократные нарушения действующего законодательства штата Пленумом.</span></span><span class="bsub"><i>-</i><span>Решение Верховного суда штата по исковому заявлению.</span></span></div>
+  <div class="body">Причины для роспуска парламента:<span class="bsub bsub-item"><i>-</i><span>Смена действующего Губернатора штата;</span></span><span class="bsub bsub-item"><i>-</i><span>Невозможность парламента осуществлять свои полномочия;</span></span><span class="bsub bsub-item"><i>-</i><span>Многократные нарушения действующего законодательства штата Пленумом.</span></span><span class="bsub bsub-item"><i>-</i><span>Решение Верховного суда штата по исковому заявлению.</span></span></div>
 </article></section><section class="chapter"><h2>Глава IV. Виды заседаний</h2>
 <article class="art" id="a-16">
   <div class="h"><a class="num" href="#a-16">16</a><span class="t">Очередной пленум парламента</span></div>
@@ -187,7 +191,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-26">
   <div class="h"><a class="num" href="#a-26">26</a><span class="t">Лишение депутатского мандата</span></div>
-  <div class="body">Губернатор и/или Спикер Парламента имеет право лишить депутата депутатского мандата в случаях:<span class="bsub"><i>-</i><span>Нарушение депутатом действующего уголовного законодательства штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Неуважение депутатом, Парламента штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Многократная неявка депутата на пленум, без уважительной причины;</span></span><span class="bsub"><i>-</i><span>Отказ от аргументации своей позиции на голосовании пленума.</span></span></div>
+  <div class="body">Губернатор и/или Спикер Парламента имеет право лишить депутата депутатского мандата в случаях:<span class="bsub bsub-item"><i>-</i><span>Нарушение депутатом действующего уголовного законодательства штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Неуважение депутатом, Парламента штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Многократная неявка депутата на пленум, без уважительной причины;</span></span><span class="bsub bsub-item"><i>-</i><span>Отказ от аргументации своей позиции на голосовании пленума.</span></span></div>
 </article>
 <article class="art" id="a-27">
   <div class="h"><a class="num" href="#a-27">27</a><span class="t">Реестр мандатов</span></div>
@@ -207,11 +211,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-31">
   <div class="h"><a class="num" href="#a-31">31</a><span class="t">Основания для введения моратория</span></div>
-  <div class="body">Основания для введения моратория:<span class="bsub"><i>-</i><span>Злоупотребление должностными полномочиями;</span></span><span class="bsub"><i>-</i><span>Межминистерские конфликты;</span></span><span class="bsub"><i>-</i><span>Чрезвычайное положение;</span></span><span class="bsub"><i>-</i><span>Подрыв конституционного порядка.</span></span></div>
+  <div class="body">Основания для введения моратория:<span class="bsub bsub-item"><i>-</i><span>Злоупотребление должностными полномочиями;</span></span><span class="bsub bsub-item"><i>-</i><span>Межминистерские конфликты;</span></span><span class="bsub bsub-item"><i>-</i><span>Чрезвычайное положение;</span></span><span class="bsub bsub-item"><i>-</i><span>Подрыв конституционного порядка.</span></span></div>
 </article></section><section class="chapter"><h2>Глава VIII. Приглашённые лица</h2>
 <article class="art" id="a-32">
   <div class="h"><a class="num" href="#a-32">32</a><span class="t">Приглашение активных граждан на пленум</span></div>
-  <div class="body">Активные граждане штата могут быть приглашены на Пленум, следующими лицами:<span class="bsub"><i>-</i><span>Губернатором штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Вице-Губернатором штата Сан-Андреас;</span></span><span class="bsub"><i>-</i><span>Спикером Парламента штата Сан-Андреас.</span></span></div>
+  <div class="body">Активные граждане штата могут быть приглашены на Пленум, следующими лицами:<span class="bsub bsub-item"><i>-</i><span>Губернатором штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Вице-Губернатором штата Сан-Андреас;</span></span><span class="bsub bsub-item"><i>-</i><span>Спикером Парламента штата Сан-Андреас.</span></span></div>
 </article>
 <article class="art" id="a-33">
   <div class="h"><a class="num" href="#a-33">33</a><span class="t">Права приглашенных лиц на пленуме</span></div>
@@ -231,7 +235,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Глава IX. Внесение законопроектов и законодательная инициатива</h2>
 <article class="art" id="a-37">
   <div class="h"><a class="num" href="#a-37">37</a><span class="t">Требования к содержанию законопроекта</span></div>
-  <div class="body">Законопроект должен содержать:<span class="bsub"><i>-</i><span>Текст изменений с указанием статьи;</span></span><span class="bsub"><i>-</i><span>Авторов законопроекта;</span></span><span class="bsub"><i>-</i><span>Краткое описание;</span></span><span class="bsub"><i>-</i><span>Уникальное название (например, XX-001).</span></span></div>
+  <div class="body">Законопроект должен содержать:<span class="bsub bsub-item"><i>-</i><span>Текст изменений с указанием статьи;</span></span><span class="bsub bsub-item"><i>-</i><span>Авторов законопроекта;</span></span><span class="bsub bsub-item"><i>-</i><span>Краткое описание;</span></span><span class="bsub bsub-item"><i>-</i><span>Уникальное название (например, XX-001).</span></span></div>
 </article>
 <article class="art" id="a-38">
   <div class="h"><a class="num" href="#a-38">38</a><span class="t">Сроки подачи законопроектов</span></div>
@@ -239,7 +243,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-39">
   <div class="h"><a class="num" href="#a-39">39</a><span class="t">Законодательная инициатива граждан</span></div>
-  <div class="body">Граждане штата Сан-Андреас вправе подавать законодательные инициативы через депутатов Парламента либо направлять законодательное предложение Спикеру Парламента через официальный портал штата. Спикер Парламента рассматривает поступившую инициативу и принимает одно из следующих решений:<span class="bsub"><i>-</i><span>Передать инициативу на рассмотрение Парламента;</span></span><span class="bsub"><i>-</i><span>Направить инициативу на доработку с указанием причин;</span></span><span class="bsub"><i>-</i><span>Отказать в передаче инициативы на рассмотрение Парламента, если она противоречит Конституции, кодексам, законам штата либо не относится к предмету законодательного регулирования.</span></span></div>
+  <div class="body">Граждане штата Сан-Андреас вправе подавать законодательные инициативы через депутатов Парламента либо направлять законодательное предложение Спикеру Парламента через официальный портал штата. Спикер Парламента рассматривает поступившую инициативу и принимает одно из следующих решений:<span class="bsub bsub-item"><i>-</i><span>Передать инициативу на рассмотрение Парламента;</span></span><span class="bsub bsub-item"><i>-</i><span>Направить инициативу на доработку с указанием причин;</span></span><span class="bsub bsub-item"><i>-</i><span>Отказать в передаче инициативы на рассмотрение Парламента, если она противоречит Конституции, кодексам, законам штата либо не относится к предмету законодательного регулирования.</span></span></div>
 </article>
 <article class="art" id="a-40">
   <div class="h"><a class="num" href="#a-40">40</a><span class="t">Направление на доработку противоречивых проектов</span></div>
@@ -247,7 +251,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-41">
   <div class="h"><a class="num" href="#a-41">41</a><span class="t">Голоса при принятии закона</span></div>
-  <div class="body">Законопроект должен содержать:<span class="bsub"><i>-</i><span>«За»;</span></span><span class="bsub"><i>-</i><span>«Против»;</span></span>Подписано Губернатором штата: Emiliano Onyx
+  <div class="body">Законопроект должен содержать:<span class="bsub bsub-item"><i>-</i><span>«За»;</span></span><span class="bsub bsub-item"><i>-</i><span>«Против»;</span></span>Подписано Губернатором штата: Emiliano Onyx
 Подпись: E.Onyx</div>
 </article></section>
 </main>

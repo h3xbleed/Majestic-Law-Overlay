@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -148,7 +152,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <article class="art" id="a-3.1">
   <div class="h"><a class="num" href="#a-3.1">3.1</a><span class="t">Виды административных наказаний</span></div>
   <div class="body">Виды административных наказаний
-Часть 1. За совершение административных правонарушений могут устанавливаться и применяться следующие административные наказания:<span class="bsub"><i>а)</i><span>предупреждение;</span></span><span class="bsub"><i>б)</i><span>административный штраф;</span></span><span class="bsub"><i>в)</i><span>конфискация орудия совершения или предмета административного правонарушения;</span></span><span class="bsub"><i>г)</i><span>лишение специального права, предоставленного физическому лицу.</span></span></div>
+Часть 1. За совершение административных правонарушений могут устанавливаться и применяться следующие административные наказания:<span class="bsub bsub-item"><i>а)</i><span>предупреждение;</span></span><span class="bsub bsub-item"><i>б)</i><span>административный штраф;</span></span><span class="bsub bsub-item"><i>в)</i><span>конфискация орудия совершения или предмета административного правонарушения;</span></span><span class="bsub bsub-item"><i>г)</i><span>лишение специального права, предоставленного физическому лицу.</span></span></div>
 </article>
 <article class="art" id="a-3.2">
   <div class="h"><a class="num" href="#a-3.2">3.2</a><span class="t">Основные и дополнительные наказания</span></div>
@@ -171,7 +175,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
   <div class="h"><a class="num" href="#a-3.5">3.5</a><span class="t">Конфискация предметов правонарушения</span></div>
   <div class="body">Конфискация орудия совершения или предмета административного правонарушения
 Часть 1. Конфискацией орудия совершения или предмета административного правонарушения является принудительное безвозмездное обращение в собственность штата Сан-Андреас не изъятых из оборота вещей. Конфискация назначается сотрудником ведущим дело об административном правонарушении.
-Часть 2. Не является конфискацией изъятие из незаконного владения лица, совершившего административное правонарушение, орудия совершения или предмета административного правонарушения:<span class="bsub"><i>а)</i><span>подлежащих возвращению их законному собственнику;</span></span><span class="bsub"><i>б)</i><span>изъятых из оборота либо находившихся в противоправном владении лица, совершившего административное правонарушение, по иным причинам и на этом основании подлежащих обращению в собственность государства или уничтожению.</span></span>Часть 3. Конфискация орудия совершения или предмета административного правонарушения, принадлежащих на праве собственности лицу, не привлеченному к административной ответственности за данное административное правонарушение не применяется</div>
+Часть 2. Не является конфискацией изъятие из незаконного владения лица, совершившего административное правонарушение, орудия совершения или предмета административного правонарушения:<span class="bsub bsub-item"><i>а)</i><span>подлежащих возвращению их законному собственнику;</span></span><span class="bsub bsub-item"><i>б)</i><span>изъятых из оборота либо находившихся в противоправном владении лица, совершившего административное правонарушение, по иным причинам и на этом основании подлежащих обращению в собственность государства или уничтожению.</span></span>Часть 3. Конфискация орудия совершения или предмета административного правонарушения, принадлежащих на праве собственности лицу, не привлеченному к административной ответственности за данное административное правонарушение не применяется</div>
 </article>
 <article class="art" id="a-3.6">
   <div class="h"><a class="num" href="#a-3.6">3.6</a><span class="t">Лишение специальных прав</span></div>
@@ -223,11 +227,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-5.3">
   <div class="h"><a class="num" href="#a-5.3">5.3</a><span class="t">Курение в неположенном месте</span><span class="san"><span class="c-fine">10к$</span></span></div>
-  <div class="body">Курение в неположенном месте.<span class="bnote"><b>Примечание</b>: курение запрещается в следующих местах:</span><span class="bsub"><i>а)</i><span>здания государственных структур и учреждений,</span></span><span class="bsub"><i>б)</i><span>места отдыха,</span></span><span class="bsub"><i>в)</i><span>культурно-массовые заведения,</span></span><span class="bsub"><i>г)</i><span>заведения общественного питания.</span></span><span class="pen">Наказание: Административный штраф в размере до 10.000$.</span></div>
+  <div class="body">Курение в неположенном месте.<span class="bnote"><b>Примечание</b>: курение запрещается в следующих местах:</span><span class="bsub bsub-item"><i>а)</i><span>здания государственных структур и учреждений,</span></span><span class="bsub bsub-item"><i>б)</i><span>места отдыха,</span></span><span class="bsub bsub-item"><i>в)</i><span>культурно-массовые заведения,</span></span><span class="bsub bsub-item"><i>г)</i><span>заведения общественного питания.</span></span><span class="pen">Наказание: Административный штраф в размере до 10.000$.</span></div>
 </article>
 <article class="art" id="a-5.4">
   <div class="h"><a class="num" href="#a-5.4">5.4</a><span class="t">Мелкое хулиганство</span><span class="san"><span class="c-fine">20к$</span></span></div>
-  <div class="body">Мелкое хулиганство, то есть нарушение общественного порядка, выражающее явное неуважение к обществу.<span class="bnote"><b>Примечание</b>: Действия, которые могут быть расценены хулиганскими:</span><span class="bsub"><i>а)</i><span>Нецензурная брань в общественном месте;</span></span><span class="bsub"><i>б)</i><span>Оскорбительное приставание к гражданам;</span></span><span class="bsub"><i>в)</i><span>Действия, несущие угрозу обществу (размахивания кулаками, ногами);</span></span><span class="bsub"><i>г)</i><span>Драка в общественных местах, если не имелось признаков уголовного преступления;</span></span><span class="bsub"><i>д)</i><span>Использование устройств, воспроизводящих музыку или другие звуки, на территории государственных учреждений;</span></span><span class="bsub"><i>е)</i><span>Явное превышение фонового шума, создающее дискомфорт, затрудняющее коммуникацию, вызывающее стресс и утомление у окружающих;</span></span><span class="bsub"><i>ж)</i><span>Задавать гражданам провокационные вопросы с оскорбительным подтекстом.</span></span><span class="pen">Наказание: Административный штраф в размере до 20.000$.</span></div>
+  <div class="body">Мелкое хулиганство, то есть нарушение общественного порядка, выражающее явное неуважение к обществу.<span class="bnote"><b>Примечание</b>: Действия, которые могут быть расценены хулиганскими:</span><span class="bsub bsub-item"><i>а)</i><span>Нецензурная брань в общественном месте;</span></span><span class="bsub bsub-item"><i>б)</i><span>Оскорбительное приставание к гражданам;</span></span><span class="bsub bsub-item"><i>в)</i><span>Действия, несущие угрозу обществу (размахивания кулаками, ногами);</span></span><span class="bsub bsub-item"><i>г)</i><span>Драка в общественных местах, если не имелось признаков уголовного преступления;</span></span><span class="bsub bsub-item"><i>д)</i><span>Использование устройств, воспроизводящих музыку или другие звуки, на территории государственных учреждений;</span></span><span class="bsub bsub-item"><i>е)</i><span>Явное превышение фонового шума, создающее дискомфорт, затрудняющее коммуникацию, вызывающее стресс и утомление у окружающих;</span></span><span class="bsub bsub-item"><i>ж)</i><span>Задавать гражданам провокационные вопросы с оскорбительным подтекстом.</span></span><span class="pen">Наказание: Административный штраф в размере до 20.000$.</span></div>
 </article>
 <article class="art" id="a-5.5">
   <div class="h"><a class="num" href="#a-5.5">5.5</a><span class="t">Распитие в общественных местах</span><span class="san"><span class="c-fine">10к$</span></span></div>

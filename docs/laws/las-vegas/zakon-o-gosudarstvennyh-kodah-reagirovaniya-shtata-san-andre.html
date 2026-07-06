@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -95,23 +99,23 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-2.1">
   <div class="h"><a class="num" href="#a-2.1">2.1</a><span class="t">Цели госкодов реагирования</span></div>
-  <div class="body">Целями настоящего Закона являются:<span class="bsub"><i>-</i><span>### повышение эффективности межведомственного взаимодействия;</span></span><span class="bsub"><i>-</i><span>### сокращение времени передачи и обработки информации в чрезвычайных ситуациях;</span></span><span class="bsub"><i>-</i><span>### обеспечение точности и однозначности служебных сообщений.</span></span></div>
+  <div class="body">Целями настоящего Закона являются:<span class="bsub bsub-item"><i>-</i><span>### повышение эффективности межведомственного взаимодействия;</span></span><span class="bsub bsub-item"><i>-</i><span>### сокращение времени передачи и обработки информации в чрезвычайных ситуациях;</span></span><span class="bsub bsub-item"><i>-</i><span>### обеспечение точности и однозначности служебных сообщений.</span></span></div>
 </article>
 <article class="art" id="a-2.2">
   <div class="h"><a class="num" href="#a-2.2">2.2</a><span class="t">Задачи системы госкодов</span></div>
-  <div class="body">Задачами Закона являются:<span class="bsub"><i>-</i><span>### установление перечня кодов и протоколов, применяемых на территории штата;</span></span><span class="bsub"><i>-</i><span>### определение правил их использования.</span></span></div>
+  <div class="body">Задачами Закона являются:<span class="bsub bsub-item"><i>-</i><span>### установление перечня кодов и протоколов, применяемых на территории штата;</span></span><span class="bsub bsub-item"><i>-</i><span>### определение правил их использования.</span></span></div>
 </article></section><section class="chapter"><h2>Раздел 3. Тен-коды</h2>
 <article class="art" id="a-3.1">
   <div class="h"><a class="num" href="#a-3.1">3.1</a><span class="t">Применение тен-кодов</span></div>
-  <div class="body"><span class="bsub"><i>-</i><span>Тен-коды используется для сокращения передачи важной информации.</span></span></div>
+  <div class="body"><span class="bsub bsub-item"><i>-</i><span>Тен-коды используется для сокращения передачи важной информации.</span></span></div>
 </article>
 <article class="art" id="a-3.2">
   <div class="h"><a class="num" href="#a-3.2">3.2</a><span class="t">Приоритет тен-кодов</span></div>
-  <div class="body"><span class="bsub"><i>-</i><span>В случае возможности использования тен-кода для передачи информации, тен-код должен обладать приоритетом.</span></span></div>
+  <div class="body"><span class="bsub bsub-item"><i>-</i><span>В случае возможности использования тен-кода для передачи информации, тен-код должен обладать приоритетом.</span></span></div>
 </article>
 <article class="art" id="a-3.3">
   <div class="h"><a class="num" href="#a-3.3">3.3</a><span class="t">Список тен-кодов</span></div>
-  <div class="body"><span class="bsub"><i>-</i><span>Тен-кодами считаются:</span></span>&gt; **10-0 — Отмена или отбой;
+  <div class="body"><span class="bsub bsub-item"><i>-</i><span>Тен-кодами считаются:</span></span>&gt; **10-0 — Отмена или отбой;
 &gt; 10-1 — Не принял сообщение, повторите;
 &gt; 10-3 — Прекратить трансляцию;
 &gt; 10-4 — Принято;
@@ -137,7 +141,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Раздел 4. Ситуативные коды</h2>
 <article class="art" id="a-4.2">
   <div class="h"><a class="num" href="#a-4.2">4.2</a><span class="t">Ситуативные коды реагирования</span></div>
-  <div class="body"><span class="bsub"><i>-</i><span>Ситуативными кодами признаются:**</span></span>&gt; **CODE 0 - Офицер убит или тяжело ранен;
+  <div class="body"><span class="bsub bsub-item"><i>-</i><span>Ситуативными кодами признаются:**</span></span>&gt; **CODE 0 - Офицер убит или тяжело ранен;
 &gt; CODE 1 - Офицер ранен;
 &gt; CODE 2 - Обычный вызов помощи;
 &gt; CODE 3 - Срочный вызов;

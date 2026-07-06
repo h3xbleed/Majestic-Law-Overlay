@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -100,7 +104,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <article class="art" id="a-2.1">
   <div class="h"><a class="num" href="#a-2.1">2.1</a><span class="t">Винтажное огнестрельное оружие: мушкеты и револьверы</span></div>
   <div class="body">Винтажное огнестрельное оружие
-Часть 1. Под винтажным огнестрельным оружием в целях настоящего Закона понимаются устаревшие типы и образцы огнестрельного оружия, конструктивно и технически характеризующиеся низкой начальной скоростью полета метаемого снаряда, ограниченной точностью и минимальной дульной энергией по сравнению с современным стрелковым вооружением — в частности:<span class="bsub"><i>-</i><span>мушкет;</span></span><span class="bsub"><i>-</i><span>наградной револьвер;</span></span><span class="bsub"><i>-</i><span>морской револьвер;</span></span><span class="bsub"><i>-</i><span>Пистолет Кайо-Перико.</span></span>Часть 2. Винтажное огнестрельное оружие признается отдельной категорией для целей оборота и использования в пределах настоящего Закона и обладает особыми режимами оборота, установленными настоящим Законом.</div>
+Часть 1. Под винтажным огнестрельным оружием в целях настоящего Закона понимаются устаревшие типы и образцы огнестрельного оружия, конструктивно и технически характеризующиеся низкой начальной скоростью полета метаемого снаряда, ограниченной точностью и минимальной дульной энергией по сравнению с современным стрелковым вооружением — в частности:<span class="bsub bsub-item"><i>-</i><span>мушкет;</span></span><span class="bsub bsub-item"><i>-</i><span>наградной револьвер;</span></span><span class="bsub bsub-item"><i>-</i><span>морской револьвер;</span></span><span class="bsub bsub-item"><i>-</i><span>Пистолет Кайо-Перико.</span></span>Часть 2. Винтажное огнестрельное оружие признается отдельной категорией для целей оборота и использования в пределах настоящего Закона и обладает особыми режимами оборота, установленными настоящим Законом.</div>
 </article>
 <article class="art" id="a-2.2">
   <div class="h"><a class="num" href="#a-2.2">2.2</a><span class="t">Охотничье оружие: ружья, пистолеты, ношение с лицензией</span></div>
@@ -206,7 +210,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-8">
   <div class="h"><a class="num" href="#a-8">8</a><span class="t">Виды огнестрельного оружия</span></div>
-  <div class="body">Огнестрельное оружие в зависимости от целей его использования соответствующими субъектами, а также по основным параметрам и характеристикам подразделяется на три вида:<span class="bsub"><i>1)</i><span>гражданское.</span></span><span class="bsub"><i>2)</i><span>служебное.</span></span><span class="bsub"><i>2)</i><span>нелегальное.</span></span></div>
+  <div class="body">Огнестрельное оружие в зависимости от целей его использования соответствующими субъектами, а также по основным параметрам и характеристикам подразделяется на три вида:<span class="bsub bsub-item"><i>1)</i><span>гражданское.</span></span><span class="bsub bsub-item"><i>2)</i><span>служебное.</span></span><span class="bsub bsub-item"><i>2)</i><span>нелегальное.</span></span></div>
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Патроны для огнестрельного оружия</span></div>
@@ -246,7 +250,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-15.1">
   <div class="h"><a class="num" href="#a-15.1">15.1</a><span class="t">Применение оружия в целях самообороны</span></div>
-  <div class="body">Действия при угрозе и применения оружия; обязанности и ответственность.<span class="bsub"><i>1.</i><span>Право на применение оружия в целях самообороны возникает в случаях непосредственной угрозы жизни или здоровью лица и применяется строго пропорционально и только для отражения реальной угрозы.</span></span><span class="bsub"><i>2.</i><span>Предварительное предупреждение (если это безопасно и разумно в конкретных условиях) остается обязательным требованием перед применением оружия, за исключением ситуаций, когда промедление создает непосредственную опасность для жизни или может повлечь тяжкие последствия.</span></span><span class="bsub"><i>3.</i><span>Обнажение или демонстрация оружия в целях запугивания, угрозы или провокации рассматривается как неправомерное действие и влечет ответственность.</span></span><span class="bsub"><i>4.</i><span>Превышение пределов необходимой обороны при применении оружия влечет ответственность в порядке, установленном действующим законодательством.</span></span></div>
+  <div class="body">Действия при угрозе и применения оружия; обязанности и ответственность.<span class="bsub bsub-item"><i>1.</i><span>Право на применение оружия в целях самообороны возникает в случаях непосредственной угрозы жизни или здоровью лица и применяется строго пропорционально и только для отражения реальной угрозы.</span></span><span class="bsub bsub-item"><i>2.</i><span>Предварительное предупреждение (если это безопасно и разумно в конкретных условиях) остается обязательным требованием перед применением оружия, за исключением ситуаций, когда промедление создает непосредственную опасность для жизни или может повлечь тяжкие последствия.</span></span><span class="bsub bsub-item"><i>3.</i><span>Обнажение или демонстрация оружия в целях запугивания, угрозы или провокации рассматривается как неправомерное действие и влечет ответственность.</span></span><span class="bsub bsub-item"><i>4.</i><span>Превышение пределов необходимой обороны при применении оружия влечет ответственность в порядке, установленном действующим законодательством.</span></span></div>
 </article>
 <article class="art" id="a-16">
   <div class="h"><a class="num" href="#a-16">16</a><span class="t">Расследование применения оружия</span></div>
@@ -516,7 +520,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-77">
   <div class="h"><a class="num" href="#a-77">77</a><span class="t">Замораживание лицензии парамедика</span></div>
-  <div class="body">Лицензия парамедика может быть заморожена или аннулирована в следующем порядке:<span class="bsub"><i>-</i><span>В случае окончания срока действия лицензии, она замораживается.</span></span><span class="bsub"><i>-</i><span>На разморозку/продление лицензии дается три дня.</span></span><span class="bsub"><i>-</i><span>Если в течении более трех дней лицензия не была разморожена/продлена, она аннулируется.</span></span><span class="bnote"><b>Примечание</b>: после аннулирования лицензии нужно заново проходить процедуру сдачи экзамена и получения лицензии парамедика.</span></div>
+  <div class="body">Лицензия парамедика может быть заморожена или аннулирована в следующем порядке:<span class="bsub bsub-item"><i>-</i><span>В случае окончания срока действия лицензии, она замораживается.</span></span><span class="bsub bsub-item"><i>-</i><span>На разморозку/продление лицензии дается три дня.</span></span><span class="bsub bsub-item"><i>-</i><span>Если в течении более трех дней лицензия не была разморожена/продлена, она аннулируется.</span></span><span class="bnote"><b>Примечание</b>: после аннулирования лицензии нужно заново проходить процедуру сдачи экзамена и получения лицензии парамедика.</span></div>
 </article>
 <article class="art" id="a-78">
   <div class="h"><a class="num" href="#a-78">78</a><span class="t">Экзамен парамедика обязателен</span></div>
@@ -540,11 +544,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-83">
   <div class="h"><a class="num" href="#a-83">83</a><span class="t">Стоимость услуг парамедика</span></div>
-  <div class="body">Стоимость оказания услуг связанных с лицензией парамедика:<span class="bsub"><i>1)</i><span>Стоимость экзамена: 30.000$.</span></span><span class="bsub"><i>2)</i><span>Стоимость продления: 25.000$</span></span><span class="bsub"><i>3)</i><span>Стоимость разморозки: 40.000$.</span></span><span class="bsub"><i>4)</i><span>Изменение имени и фамилии: 20.000$</span></span><span class="bnote"><b>Примечание</b>: В случае смены фамилии в результате заключение брачного договора, необходимо уведомить Экзаменатора, таким образом, цена данной услуги - 5.000$.</span><span class="bnote"><b>Примечание</b>: Экзаменатор вправе получить 10% от стоимости услуги.</span></div>
+  <div class="body">Стоимость оказания услуг связанных с лицензией парамедика:<span class="bsub bsub-item"><i>1)</i><span>Стоимость экзамена: 30.000$.</span></span><span class="bsub bsub-item"><i>2)</i><span>Стоимость продления: 25.000$</span></span><span class="bsub bsub-item"><i>3)</i><span>Стоимость разморозки: 40.000$.</span></span><span class="bsub bsub-item"><i>4)</i><span>Изменение имени и фамилии: 20.000$</span></span><span class="bnote"><b>Примечание</b>: В случае смены фамилии в результате заключение брачного договора, необходимо уведомить Экзаменатора, таким образом, цена данной услуги - 5.000$.</span><span class="bnote"><b>Примечание</b>: Экзаменатор вправе получить 10% от стоимости услуги.</span></div>
 </article>
 <article class="art" id="a-84">
   <div class="h"><a class="num" href="#a-84">84</a><span class="t">Процесс получения лицензии парамедика</span></div>
-  <div class="body">Процесс получения лицензии парамедика.<span class="bsub"><i>1.</i><span>Гражданин должен прибыть в EMS и найти Экзаменатора для прохождения экзамена.</span></span><span class="bsub"><i>2.</i><span>После успешной сдачи экзамена, Экзаменатор обязан внести данные гражданина в реестр лицензий Парамедика.</span></span></div>
+  <div class="body">Процесс получения лицензии парамедика.<span class="bsub bsub-item"><i>1.</i><span>Гражданин должен прибыть в EMS и найти Экзаменатора для прохождения экзамена.</span></span><span class="bsub bsub-item"><i>2.</i><span>После успешной сдачи экзамена, Экзаменатор обязан внести данные гражданина в реестр лицензий Парамедика.</span></span></div>
 </article>
 <article class="art" id="a-85">
   <div class="h"><a class="num" href="#a-85">85</a><span class="t">Маркировка дефибриллятора парамедика</span></div>
@@ -556,7 +560,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-87">
   <div class="h"><a class="num" href="#a-87">87</a><span class="t">Изъятие дефибриллятора по причинам</span></div>
-  <div class="body">Дефибриллятор, находящийся и использующийся у граждан, может быть изъят в случаях если:<span class="bsub"><i>-</i><span>Лицензия парамедика Аннулирована или отсутствует.</span></span><span class="bsub"><i>-</i><span>Не соблюдение статей 85 и 86, настоящего закона.</span></span></div>
+  <div class="body">Дефибриллятор, находящийся и использующийся у граждан, может быть изъят в случаях если:<span class="bsub bsub-item"><i>-</i><span>Лицензия парамедика Аннулирована или отсутствует.</span></span><span class="bsub bsub-item"><i>-</i><span>Не соблюдение статей 85 и 86, настоящего закона.</span></span></div>
 </article>
 <article class="art" id="a-88">
   <div class="h"><a class="num" href="#a-88">88</a><span class="t">Защита дефибриллятора без номеров</span></div>

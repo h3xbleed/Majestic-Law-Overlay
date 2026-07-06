@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -95,7 +99,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-5">
   <div class="h"><a class="num" href="#a-5">5</a><span class="t">Функции адвоката</span></div>
-  <div class="body">Оказывая юридическую помощь, адвокат:<span class="bsub"><i>-</i><span>даёт консультации и справки по правовым вопросам как в устной, так и в письменной форме;</span></span><span class="bsub"><i>-</i><span>составляет заявления, жалобы, ходатайства и другие документы правового характера;</span></span><span class="bsub"><i>-</i><span>участвует в качестве представителя доверителя в уголовном, административном или ином судопроизводстве;</span></span><span class="bsub"><i>-</i><span>участвует в качестве представителя или защитника доверителя в уголовном судопроизводстве и производстве по делам об административных правонарушениях;</span></span><span class="bsub"><i>-</i><span>участвует в качестве представителя доверителя в исполнительном производстве, а также при исполнении уголовного наказания.</span></span></div>
+  <div class="body">Оказывая юридическую помощь, адвокат:<span class="bsub bsub-item"><i>-</i><span>даёт консультации и справки по правовым вопросам как в устной, так и в письменной форме;</span></span><span class="bsub bsub-item"><i>-</i><span>составляет заявления, жалобы, ходатайства и другие документы правового характера;</span></span><span class="bsub bsub-item"><i>-</i><span>участвует в качестве представителя доверителя в уголовном, административном или ином судопроизводстве;</span></span><span class="bsub bsub-item"><i>-</i><span>участвует в качестве представителя или защитника доверителя в уголовном судопроизводстве и производстве по делам об административных правонарушениях;</span></span><span class="bsub bsub-item"><i>-</i><span>участвует в качестве представителя доверителя в исполнительном производстве, а также при исполнении уголовного наказания.</span></span></div>
 </article>
 <article class="art" id="a-6.1">
   <div class="h"><a class="num" href="#a-6.1">6.1</a><span class="t">Финансирование частных адвокатов</span></div>
@@ -115,7 +119,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-3">
   <div class="h"><a class="num" href="#a-3">3</a><span class="t">Права адвоката</span></div>
-  <div class="body">Адвокат вправе:<span class="bsub"><i>-</i><span>собирать сведения, необходимые для оказания юридической помощи, в том числе запрашивать справки, характеристики и иные документы от органов государственной власти, общественных объединений и иных организаций в установленном законом порядке;</span></span><span class="bsub"><i>-</i><span>опрашивать с их согласия лиц, предположительно владеющих информацией, относящейся к делу;</span></span><span class="bsub"><i>-</i><span>собирать и представлять предметы и документы, признанные вещественными доказательствами;</span></span><span class="bsub"><i>-</i><span>привлекать на договорной основе специалистов для разъяснения вопросов;</span></span><span class="bsub"><i>-</i><span>беспрепятственно встречаться с доверителем наедине;</span></span><span class="bsub"><i>-</i><span>фиксировать информацию из материалов дела, соблюдая охраняемую тайну;</span></span><span class="bsub"><i>-</i><span>получать доступ к любому видеоматериалу по делу;</span></span><span class="bsub"><i>-</i><span>совершать иные действия, не противоречащие законодательству штата.</span></span></div>
+  <div class="body">Адвокат вправе:<span class="bsub bsub-item"><i>-</i><span>собирать сведения, необходимые для оказания юридической помощи, в том числе запрашивать справки, характеристики и иные документы от органов государственной власти, общественных объединений и иных организаций в установленном законом порядке;</span></span><span class="bsub bsub-item"><i>-</i><span>опрашивать с их согласия лиц, предположительно владеющих информацией, относящейся к делу;</span></span><span class="bsub bsub-item"><i>-</i><span>собирать и представлять предметы и документы, признанные вещественными доказательствами;</span></span><span class="bsub bsub-item"><i>-</i><span>привлекать на договорной основе специалистов для разъяснения вопросов;</span></span><span class="bsub bsub-item"><i>-</i><span>беспрепятственно встречаться с доверителем наедине;</span></span><span class="bsub bsub-item"><i>-</i><span>фиксировать информацию из материалов дела, соблюдая охраняемую тайну;</span></span><span class="bsub bsub-item"><i>-</i><span>получать доступ к любому видеоматериалу по делу;</span></span><span class="bsub bsub-item"><i>-</i><span>совершать иные действия, не противоречащие законодательству штата.</span></span></div>
 </article>
 <article class="art" id="a-6">
   <div class="h"><a class="num" href="#a-6">6</a><span class="t">Адвокатский запрос</span></div>
@@ -141,7 +145,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-11">
   <div class="h"><a class="num" href="#a-11">11</a><span class="t">Основания аннулирования лицензии</span></div>
-  <div class="body">Основаниями для аннулирования лицензии частного адвоката являются:<span class="bsub"><i>-</i><span>совершение частным адвокатом преступления;</span></span><span class="bsub"><i>-</i><span>нарушение частным адвокатам положений настоящего закона, а равно несоблюдение указанных в настоящем законе обязанностей адвоката;</span></span><span class="bsub"><i>-</i><span>незаконная выдача лицензии частного адвоката либо несоответствие требованиям, выдвигаемых к частным адвокатом настоящим законом.</span></span></div>
+  <div class="body">Основаниями для аннулирования лицензии частного адвоката являются:<span class="bsub bsub-item"><i>-</i><span>совершение частным адвокатом преступления;</span></span><span class="bsub bsub-item"><i>-</i><span>нарушение частным адвокатам положений настоящего закона, а равно несоблюдение указанных в настоящем законе обязанностей адвоката;</span></span><span class="bsub bsub-item"><i>-</i><span>незаконная выдача лицензии частного адвоката либо несоответствие требованиям, выдвигаемых к частным адвокатом настоящим законом.</span></span></div>
 </article>
 <article class="art" id="a-12">
   <div class="h"><a class="num" href="#a-12">12</a><span class="t">Обязательность требований адвоката</span></div>

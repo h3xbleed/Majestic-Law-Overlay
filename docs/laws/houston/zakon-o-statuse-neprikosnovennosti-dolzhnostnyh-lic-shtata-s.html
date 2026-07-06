@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -87,8 +91,8 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <section class="chapter"><h2>Глава I. Общее положение</h2>
 <article class="art" id="a-1">
   <div class="h"><a class="num" href="#a-1">1</a><span class="t">Неприкосновенность должностных лиц</span></div>
-  <div class="body">Перечень лиц, обладающих статусом неприкосновенности.<span class="bsub"><i>1.</i><span>Губернатор, Вице-губернатор и советники Губернатора;</span></span>2.
-Министры и их заместители;<span class="bnote"><b>Примечание</b>: Государственный казначей и министр финансов - тождественные наименования одной должности</span><span class="bsub"><i>3.</i><span>Судьи штата Сан Андреас;</span></span>4.
+  <div class="body">Перечень лиц, обладающих статусом неприкосновенности.<span class="bsub bsub-item"><i>1.</i><span>Губернатор, Вице-губернатор и советники Губернатора;</span></span>2.
+Министры и их заместители;<span class="bnote"><b>Примечание</b>: Государственный казначей и министр финансов - тождественные наименования одной должности</span><span class="bsub bsub-item"><i>3.</i><span>Судьи штата Сан Андреас;</span></span>4.
 Постоянные Члены Конгресса;<span class="bnote"><b>Примечание</b>: в список постоянных членов Конгресса входят:</span>Заместитель Председателя Конгресса
 Директор FIB и его заместители
 Шеф LSPD и его заместители
@@ -96,7 +100,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 Шериф LSCSD и его заместители
 Директор WN и его заместители
 Глава SANG и его заместители
-Пояснение: Временно назначенные члены конгресса не входят в список лиц обладающих неприкосновенностью.<span class="bsub"><i>5.</i><span>Сотрудники United States Secret Service при исполнении прямых служебных обязанностей, а именно при охране первых лиц штата, охране Капитолия и судебных заседаний или участии в защитной и охранно-следственной миссиях;</span></span><span class="bnote"><b>Примечание</b>: Стажёры United States Secret Service не являются неприкосновенными лицами.</span><span class="bnote"><b>Исключение</b>: </span>Директор и заместители директора United States Secret Service, при исполнении должностных обязанностей.<span class="bsub"><i>6.</i><span>Сотрудники United States Marshals Service при исполнении прямых служебных обязанностей, а именно при отработке судебных актов и ордеров;</span></span><span class="bsub"><i>7.</i><span>Сотрудники прокуратуры при исполнении должностных обязанностей.</span></span><span class="bsub"><i>8.</i><span>Глава Коллегии Адвокатов или его заместители при исполнении должностных обязанностей.</span></span>9.
+Пояснение: Временно назначенные члены конгресса не входят в список лиц обладающих неприкосновенностью.<span class="bsub bsub-item"><i>5.</i><span>Сотрудники United States Secret Service при исполнении прямых служебных обязанностей, а именно при охране первых лиц штата, охране Капитолия и судебных заседаний или участии в защитной и охранно-следственной миссиях;</span></span><span class="bnote"><b>Примечание</b>: Стажёры United States Secret Service не являются неприкосновенными лицами.</span><span class="bnote"><b>Исключение</b>: </span>Директор и заместители директора United States Secret Service, при исполнении должностных обязанностей.<span class="bsub bsub-item"><i>6.</i><span>Сотрудники United States Marshals Service при исполнении прямых служебных обязанностей, а именно при отработке судебных актов и ордеров;</span></span><span class="bsub bsub-item"><i>7.</i><span>Сотрудники прокуратуры при исполнении должностных обязанностей.</span></span><span class="bsub bsub-item"><i>8.</i><span>Глава Коллегии Адвокатов или его заместители при исполнении должностных обязанностей.</span></span>9.
 Сотрудники IB FIB при надзорной деятельности.</div>
 </article>
 <article class="art" id="a-2">
@@ -109,7 +113,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-3">
   <div class="h"><a class="num" href="#a-3">3</a><span class="t">Первые лица штата</span></div>
-  <div class="body">Первыми лицами штата являются Лица, занимающие высшие государственные должности, а именно:<span class="bsub"><i>-</i><span>### Губернатор</span></span><span class="bsub"><i>-</i><span>### Вице-Губернатор</span></span><span class="bsub"><i>-</i><span>### Советник губернатора</span></span><span class="bsub"><i>-</i><span>### Министры и их заместители</span></span><span class="bsub"><i>-</i><span>### Верховные судьи</span></span></div>
+  <div class="body">Первыми лицами штата являются Лица, занимающие высшие государственные должности, а именно:<span class="bsub bsub-item"><i>-</i><span>### Губернатор</span></span><span class="bsub bsub-item"><i>-</i><span>### Вице-Губернатор</span></span><span class="bsub bsub-item"><i>-</i><span>### Советник губернатора</span></span><span class="bsub bsub-item"><i>-</i><span>### Министры и их заместители</span></span><span class="bsub bsub-item"><i>-</i><span>### Верховные судьи</span></span></div>
 </article></section><section class="chapter"><h2>Глава II. Положение о статусе неприкосновенности</h2>
 <article class="art" id="a-4">
   <div class="h"><a class="num" href="#a-4">4</a><span class="t">Административная ответственность неприкосновенных лиц</span></div>
@@ -133,7 +137,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-8">
   <div class="h"><a class="num" href="#a-8">8</a><span class="t">Защита от досмотра и обыска</span></div>
-  <div class="body">Лицо, обладающее статусом неприкосновенности, не может подвергаться процедуре досмотра или обыска.<span class="bnote"><b>Исключение</b>: </span><span class="bsub"><i>1.</i><span>В случаях задержания, производимого в связи с нарушением статей Уголовного Кодекса штата Сан Андреас, указанных в части 2 статьи 6 настоящего закона.</span></span><span class="bsub"><i>2.</i><span>Должностные лица, указанные в г. 1 ст. 1 ч. 7, 8 и 9 настоящего закона, могут быть подвергнуты процедуре обыска в случаях прохода на режимный объект, объект особой важности, проход к первым лицам Штата.</span></span></div>
+  <div class="body">Лицо, обладающее статусом неприкосновенности, не может подвергаться процедуре досмотра или обыска.<span class="bnote"><b>Исключение</b>: </span><span class="bsub bsub-item"><i>1.</i><span>В случаях задержания, производимого в связи с нарушением статей Уголовного Кодекса штата Сан Андреас, указанных в части 2 статьи 6 настоящего закона.</span></span><span class="bsub bsub-item"><i>2.</i><span>Должностные лица, указанные в г. 1 ст. 1 ч. 7, 8 и 9 настоящего закона, могут быть подвергнуты процедуре обыска в случаях прохода на режимный объект, объект особой важности, проход к первым лицам Штата.</span></span></div>
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Задержание неприкосновенного запрещено</span></div>
@@ -165,7 +169,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-16">
   <div class="h"><a class="num" href="#a-16">16</a><span class="t">Расследование неприкосновенных персон</span></div>
-  <div class="body">Расследование в отношении неприкосновенных должностных лиц может проводиться исключительно следующими субъектами:<span class="bsub"><i>-</i><span>### Генеральным прокурором, его заместителями, специальными прокурорами;</span></span><span class="bsub"><i>-</i><span>### окружными прокурорами, агентами IB, частными детективами - при наличии ордера AI.</span></span></div>
+  <div class="body">Расследование в отношении неприкосновенных должностных лиц может проводиться исключительно следующими субъектами:<span class="bsub bsub-item"><i>-</i><span>### Генеральным прокурором, его заместителями, специальными прокурорами;</span></span><span class="bsub bsub-item"><i>-</i><span>### окружными прокурорами, агентами IB, частными детективами - при наличии ордера AI.</span></span></div>
 </article>
 <article class="art" id="a-17">
   <div class="h"><a class="num" href="#a-17">17</a><span class="t">Приостановление неприкосновенности импичментом</span></div>

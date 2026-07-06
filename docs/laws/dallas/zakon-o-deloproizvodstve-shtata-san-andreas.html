@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -93,11 +97,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-2">
   <div class="h"><a class="num" href="#a-2">2</a><span class="t">Законодательная основа делопроизводства</span></div>
-  <div class="body">Законодательная основа делопроизводства<span class="bsub"><i>1.</i><span>Делопроизводство осуществляется в соответствии с:</span></span><span class="bsub"><i>-</i><span>Процессуальным кодексом штата San-Andreas;</span></span><span class="bsub"><i>-</i><span>Уголовным кодексом штата San-Andreas;</span></span><span class="bsub"><i>-</i><span>Административным законодательством штата;</span></span><span class="bsub"><i>-</i><span>настоящим Законом;</span></span><span class="bsub"><i>-</i><span>иными нормативно-правовыми актами.</span></span><span class="bsub"><i>2.</i><span>В случае противоречия норм настоящего Закона нормам Процессуального кодекса - применяются нормы Процессуального кодекса.</span></span></div>
+  <div class="body">Законодательная основа делопроизводства<span class="bsub bsub-item"><i>1.</i><span>Делопроизводство осуществляется в соответствии с:</span></span><span class="bsub bsub-item"><i>-</i><span>Процессуальным кодексом штата San-Andreas;</span></span><span class="bsub bsub-item"><i>-</i><span>Уголовным кодексом штата San-Andreas;</span></span><span class="bsub bsub-item"><i>-</i><span>Административным законодательством штата;</span></span><span class="bsub bsub-item"><i>-</i><span>настоящим Законом;</span></span><span class="bsub bsub-item"><i>-</i><span>иными нормативно-правовыми актами.</span></span><span class="bsub bsub-item"><i>2.</i><span>В случае противоречия норм настоящего Закона нормам Процессуального кодекса - применяются нормы Процессуального кодекса.</span></span></div>
 </article>
 <article class="art" id="a-3">
   <div class="h"><a class="num" href="#a-3">3</a><span class="t">Возбуждение делопроизводства</span></div>
-  <div class="body">Возбуждение делопроизводства<span class="bsub"><i>1.</i><span>Возбуждение делопроизводства является документальной стадией и придающей делу юридическую силу.</span></span><span class="bsub"><i>2.</i><span>Возбуждение оформляется постановлением, вынесенным уполномоченным лицом.</span></span><span class="bsub"><i>3.</i><span>Отсутствие постановления делает делопроизводство недействительным, за исключением случаев, прямо предусмотренных Процессуальным кодексом или иными законами.</span></span></div>
+  <div class="body">Возбуждение делопроизводства<span class="bsub bsub-item"><i>1.</i><span>Возбуждение делопроизводства является документальной стадией и придающей делу юридическую силу.</span></span><span class="bsub bsub-item"><i>2.</i><span>Возбуждение оформляется постановлением, вынесенным уполномоченным лицом.</span></span><span class="bsub bsub-item"><i>3.</i><span>Отсутствие постановления делает делопроизводство недействительным, за исключением случаев, прямо предусмотренных Процессуальным кодексом или иными законами.</span></span></div>
 </article>
 <article class="art" id="a-4">
   <div class="h"><a class="num" href="#a-4">4</a><span class="t">Утратила силу</span></div>
@@ -109,7 +113,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-5.1">
   <div class="h"><a class="num" href="#a-5.1">5.1</a><span class="t">Поводы для возбуждения уголовного дела</span></div>
-  <div class="body">Поводами для возбуждения уголовного дела служат:<span class="bsub"><i>1)</i><span>заявление о преступлении;</span></span><span class="bsub"><i>2)</i><span>явка с повинной;</span></span><span class="bsub"><i>3)</i><span>постановление прокурора о направлении соответствующих материалов в орган следствия для решения вопроса об уголовном преследовании;</span></span><span class="bsub"><i>4)</i><span>обнаружение признаков преступления.</span></span></div>
+  <div class="body">Поводами для возбуждения уголовного дела служат:<span class="bsub bsub-item"><i>1)</i><span>заявление о преступлении;</span></span><span class="bsub bsub-item"><i>2)</i><span>явка с повинной;</span></span><span class="bsub bsub-item"><i>3)</i><span>постановление прокурора о направлении соответствующих материалов в орган следствия для решения вопроса об уголовном преследовании;</span></span><span class="bsub bsub-item"><i>4)</i><span>обнаружение признаков преступления.</span></span></div>
 </article>
 <article class="art" id="a-5.2">
   <div class="h"><a class="num" href="#a-5.2">5.2</a><span class="t">Достаточные данные для возбуждения</span></div>
@@ -118,25 +122,25 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <article class="art" id="a-6">
   <div class="h"><a class="num" href="#a-6">6</a><span class="t">Отказ в возбуждении уголовного дела</span></div>
   <div class="body">Основания отказа в возбуждении уголовного дела или прекращения уголовного дела
-Уголовное дело не может быть возбуждено, а возбужденное уголовное дело подлежит прекращению по следующим основаниям:<span class="bsub"><i>1)</i><span>отсутствие события преступления;</span></span><span class="bsub"><i>2)</i><span>отсутствие в деянии состава преступления;</span></span><span class="bsub"><i>3)</i><span>истечение сроков давности уголовного преследования;</span></span><span class="bsub"><i>4)</i><span>отсутствие возможности продолжать расследование.</span></span></div>
+Уголовное дело не может быть возбуждено, а возбужденное уголовное дело подлежит прекращению по следующим основаниям:<span class="bsub bsub-item"><i>1)</i><span>отсутствие события преступления;</span></span><span class="bsub bsub-item"><i>2)</i><span>отсутствие в деянии состава преступления;</span></span><span class="bsub bsub-item"><i>3)</i><span>истечение сроков давности уголовного преследования;</span></span><span class="bsub bsub-item"><i>4)</i><span>отсутствие возможности продолжать расследование.</span></span></div>
 </article></section><section class="chapter"><h2>ГЛАВА III. ВИДЫ И УЧАСТНИКИ ДЕЛОПРОИЗВОДСТВА</h2>
 <article class="art" id="a-7">
   <div class="h"><a class="num" href="#a-7">7</a><span class="t">Виды делопроизводства</span></div>
   <div class="body">Виды делопроизводства
-Делопроизводство подразделяется на:<span class="bsub"><i>-</i><span>Уголовное;</span></span><span class="bsub"><i>-</i><span>Административное;</span></span><span class="bsub"><i>-</i><span>Уголовно-административное.</span></span>Обозначения:<span class="bsub"><i>-</i><span>УД / УДП</span></span><span class="bsub"><i>-</i><span>АД / АДП</span></span><span class="bsub"><i>-</i><span>УАД / УАДП</span></span></div>
+Делопроизводство подразделяется на:<span class="bsub bsub-item"><i>-</i><span>Уголовное;</span></span><span class="bsub bsub-item"><i>-</i><span>Административное;</span></span><span class="bsub bsub-item"><i>-</i><span>Уголовно-административное.</span></span>Обозначения:<span class="bsub bsub-item"><i>-</i><span>УД / УДП</span></span><span class="bsub bsub-item"><i>-</i><span>АД / АДП</span></span><span class="bsub bsub-item"><i>-</i><span>УАД / УАДП</span></span></div>
 </article>
 <article class="art" id="a-8">
   <div class="h"><a class="num" href="#a-8">8</a><span class="t">Уполномоченные органы ведения делопроизводства</span></div>
   <div class="body">Уполномоченные органы
-Ведение делопроизводства осуществляют:<span class="bsub"><i>-</i><span>Офис Генерального прокурора;</span></span><span class="bsub"><i>-</i><span>FIB (IB, CID);</span></span><span class="bsub"><i>-</i><span>LSPD, LSCSD (DB);</span></span></div>
+Ведение делопроизводства осуществляют:<span class="bsub bsub-item"><i>-</i><span>Офис Генерального прокурора;</span></span><span class="bsub bsub-item"><i>-</i><span>FIB (IB, CID);</span></span><span class="bsub bsub-item"><i>-</i><span>LSPD, LSCSD (DB);</span></span></div>
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Следователь в делопроизводстве</span></div>
-  <div class="body">Следователь<span class="bsub"><i>1.</i><span>Следователь - должностное лицо, осуществляющее ведение делопроизводства.</span></span><span class="bsub"><i>2.</i><span>Количество следователей в одном ДП - не более двух.</span></span><span class="bsub"><i>3.</i><span>Следователь не вправе выходить за рамки процессуальных полномочий, установленных Процессуальным кодексом.</span></span></div>
+  <div class="body">Следователь<span class="bsub bsub-item"><i>1.</i><span>Следователь - должностное лицо, осуществляющее ведение делопроизводства.</span></span><span class="bsub bsub-item"><i>2.</i><span>Количество следователей в одном ДП - не более двух.</span></span><span class="bsub bsub-item"><i>3.</i><span>Следователь не вправе выходить за рамки процессуальных полномочий, установленных Процессуальным кодексом.</span></span></div>
 </article></section><section class="chapter"><h2>ГЛАВА V. ФОРМАТ И СТРУКТУРА ДЕЛОПРОИЗВОДСТВА</h2>
 <article class="art" id="a-10">
   <div class="h"><a class="num" href="#a-10">10</a><span class="t">Электронный формат делопроизводства</span></div>
-  <div class="body">Формат делопроизводства<span class="bsub"><i>1.</i><span>Делопроизводство ведется исключительно в электронном формате.</span></span><span class="bsub"><i>2.</i><span>Все документы, входящие в состав делопроизводства, имеют статус государственных документов.</span></span><span class="bsub"><i>3.</i><span>Делопроизводство подлежит обязательной идентификации посредством номенклатурного номера, присваиваемого при его возбуждении.</span></span><span class="bsub"><i>4.</i><span>Формат и номенклатура делопроизводства устанавливаются настоящим Законом и являются обязательными для всех уполномоченных органов.</span></span></div>
+  <div class="body">Формат делопроизводства<span class="bsub bsub-item"><i>1.</i><span>Делопроизводство ведется исключительно в электронном формате.</span></span><span class="bsub bsub-item"><i>2.</i><span>Все документы, входящие в состав делопроизводства, имеют статус государственных документов.</span></span><span class="bsub bsub-item"><i>3.</i><span>Делопроизводство подлежит обязательной идентификации посредством номенклатурного номера, присваиваемого при его возбуждении.</span></span><span class="bsub bsub-item"><i>4.</i><span>Формат и номенклатура делопроизводства устанавливаются настоящим Законом и являются обязательными для всех уполномоченных органов.</span></span></div>
 </article>
 <article class="art" id="a-10.1">
   <div class="h"><a class="num" href="#a-10.1">10.1</a><span class="t">Номенклатура делопроизводства</span></div>
@@ -145,20 +149,20 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 <article class="art" id="a-11">
   <div class="h"><a class="num" href="#a-11">11</a><span class="t">Структура делопроизводства</span></div>
   <div class="body">Структура делопроизводства
-Делопроизводство включает:<span class="bsub"><i>-</i><span>Титульная часть</span></span><span class="bsub"><i>-</i><span>Преамбула</span></span><span class="bsub"><i>-</i><span>Ход расследования</span></span><span class="bsub"><i>-</i><span>Правовая оценка действий</span></span><span class="bsub"><i>-</i><span>Заключение</span></span><span class="bsub"><i>-</i><span>Материалы дела</span></span><span class="bsub"><i>-</i><span>Утверждение и подписание</span></span></div>
+Делопроизводство включает:<span class="bsub bsub-item"><i>-</i><span>Титульная часть</span></span><span class="bsub bsub-item"><i>-</i><span>Преамбула</span></span><span class="bsub bsub-item"><i>-</i><span>Ход расследования</span></span><span class="bsub bsub-item"><i>-</i><span>Правовая оценка действий</span></span><span class="bsub bsub-item"><i>-</i><span>Заключение</span></span><span class="bsub bsub-item"><i>-</i><span>Материалы дела</span></span><span class="bsub bsub-item"><i>-</i><span>Утверждение и подписание</span></span></div>
 </article>
 <article class="art" id="a-12">
   <div class="h"><a class="num" href="#a-12">12</a><span class="t">Допустимые доказательства в деле</span></div>
-  <div class="body">Материалы дела<span class="bsub"><i>1.</i><span>В материалы включаются только допустимые доказательства в соответствии с Процессуальным кодексом.</span></span><span class="bsub"><i>2.</i><span>Недопустимые доказательства не подлежат включению в делопроизводство.</span></span></div>
+  <div class="body">Материалы дела<span class="bsub bsub-item"><i>1.</i><span>В материалы включаются только допустимые доказательства в соответствии с Процессуальным кодексом.</span></span><span class="bsub bsub-item"><i>2.</i><span>Недопустимые доказательства не подлежат включению в делопроизводство.</span></span></div>
 </article>
 <article class="art" id="a-13">
   <div class="h"><a class="num" href="#a-13">13</a><span class="t">Утверждение делопроизводства</span></div>
-  <div class="body">Утверждение<span class="bsub"><i>1.</i><span>Делопроизводство подлежит утверждению следователем.</span></span><span class="bsub"><i>2.</i><span>Неутвержденные делопроизводства не могут использоваться в суде или прокуратуре.</span></span></div>
+  <div class="body">Утверждение<span class="bsub bsub-item"><i>1.</i><span>Делопроизводство подлежит утверждению следователем.</span></span><span class="bsub bsub-item"><i>2.</i><span>Неутвержденные делопроизводства не могут использоваться в суде или прокуратуре.</span></span></div>
 </article></section><section class="chapter"><h2>ГЛАВА VI. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h2>
 <article class="art" id="a-14">
   <div class="h"><a class="num" href="#a-14">14</a><span class="t">Контроль за ведением делопроизводства</span></div>
   <div class="body">Контроль
-Контроль за ведением делопроизводства осуществляют:<span class="bsub"><i>-</i><span>Суд;</span></span><span class="bsub"><i>-</i><span>Офис Генерального прокурора;</span></span><span class="bsub"><i>-</i><span>Руководство соответствующих органов.</span></span><span class="bnote"><b>Исключение</b>: никто, кроме ведущего следователя не может вмешиваться и регулировать ход следствия, обязывать возбуждать или просить назначить определенное наказание.</span></div>
+Контроль за ведением делопроизводства осуществляют:<span class="bsub bsub-item"><i>-</i><span>Суд;</span></span><span class="bsub bsub-item"><i>-</i><span>Офис Генерального прокурора;</span></span><span class="bsub bsub-item"><i>-</i><span>Руководство соответствующих органов.</span></span><span class="bnote"><b>Исключение</b>: никто, кроме ведущего следователя не может вмешиваться и регулировать ход следствия, обязывать возбуждать или просить назначить определенное наказание.</span></div>
 </article>
 <article class="art" id="a-15">
   <div class="h"><a class="num" href="#a-15">15</a><span class="t">Вступление в силу закона</span></div>

@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -96,7 +100,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-2.1">
   <div class="h"><a class="num" href="#a-2.1">2.1</a><span class="t">Категории государственной службы</span></div>
-  <div class="body">Государственная служба делится на следующие категории:<span class="bsub"><i>-</i><span>Гражданская (правительственная) служба: Government</span></span><span class="bsub"><i>-</i><span>Региональная правоохранительная служба: Los Santos Police Department, Sheriff Department</span></span><span class="bsub"><i>-</i><span>Федеральная правоохранительная служба: Federal Investigation Bureau, United States Secret Service</span></span><span class="bsub"><i>-</i><span>Военная служба: San-Andreas National Guard</span></span><span class="bsub"><i>-</i><span>Медицинская служба: Emergency Medical Services</span></span><span class="bsub"><i>-</i><span>Новостная служба: Weazel News</span></span></div>
+  <div class="body">Государственная служба делится на следующие категории:<span class="bsub bsub-item"><i>-</i><span>Гражданская (правительственная) служба: Government</span></span><span class="bsub bsub-item"><i>-</i><span>Региональная правоохранительная служба: Los Santos Police Department, Sheriff Department</span></span><span class="bsub bsub-item"><i>-</i><span>Федеральная правоохранительная служба: Federal Investigation Bureau, United States Secret Service</span></span><span class="bsub bsub-item"><i>-</i><span>Военная служба: San-Andreas National Guard</span></span><span class="bsub bsub-item"><i>-</i><span>Медицинская служба: Emergency Medical Services</span></span><span class="bsub bsub-item"><i>-</i><span>Новостная служба: Weazel News</span></span></div>
 </article>
 <article class="art" id="a-2.2">
   <div class="h"><a class="num" href="#a-2.2">2.2</a><span class="t">Силовые структуры</span></div>
@@ -176,11 +180,11 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-13">
   <div class="h"><a class="num" href="#a-13">13</a><span class="t">Когда не обязательно предоставлять удостоверение</span></div>
-  <div class="body">Государственные Служащие не обязаны предоставлять удостоверение/нашивку/бейдж/жетон в случае, если:<span class="bsub"><i>1.</i><span>Не проводят процессуальные действия.</span></span><span class="bsub"><i>2.</i><span>Не предоставляют Государственные услуги, равно как при неисполнении должностных обязанностей.</span></span></div>
+  <div class="body">Государственные Служащие не обязаны предоставлять удостоверение/нашивку/бейдж/жетон в случае, если:<span class="bsub bsub-item"><i>1.</i><span>Не проводят процессуальные действия.</span></span><span class="bsub bsub-item"><i>2.</i><span>Не предоставляют Государственные услуги, равно как при неисполнении должностных обязанностей.</span></span></div>
 </article>
 <article class="art" id="a-14">
   <div class="h"><a class="num" href="#a-14">14</a><span class="t">Идентификация и удостоверение служащего</span></div>
-  <div class="body">Государственные служащие обязуются себя идентифицировать, либо удостоверить свою личность, если:<span class="bsub"><i>1.</i><span>Лицо, в отношении которого ведутся процессуальные действия, либо лица, являющиеся субъектами задержания потребовали идентификации или удостоверения личности.</span></span><span class="bnote"><b>Примечание</b>: идентификация лица, как государственного служащего, происходит путем закрепления на форме сотрудника идентификационных знаков.</span><span class="bnote"><b>Примечание</b>: удостоверение личности, как конкретного сотрудника, происходит путем ознакомления с его служебным удостоверением.</span><span class="bsub"><i>2.</i><span>Государственный служащий, находящийся на момент требования при исполнении своих служебных обязанностей, предварительно удостоверив свою личность требует предоставить иного служащего его служебное удостоверение.</span></span><span class="bnote"><b>Примечание</b>: Если государственный служащий запросил удостоверение, то необходимо предоставить именно его.</span><span class="bsub"><i>3.</i><span>Сотрудник проигнорировал нарушения гражданских лиц находясь при исполнении.</span></span><span class="bsub"><i>4.</i><span>Указывают/приказывают/просят/предупреждают гражданское лицо.</span></span><span class="bnote"><b>Примечание</b>: каждый государственный служащий, исполняющий свои должностные обязанности, обязуется носить присвоенные ему идентификационные знаки в открытом виде.</span><span class="bnote"><b>Исключение</b>: Исключение: лица, не являющиеся сотрудниками правоохранительных ведомств или военной службы, не обязаны носить идентификационные знаки, однако обязаны иметь при себе служебное удостоверение. Правоохранительные ведомства имеют право не носить идентификационные знаки при работе под прикрытием.</span></div>
+  <div class="body">Государственные служащие обязуются себя идентифицировать, либо удостоверить свою личность, если:<span class="bsub bsub-item"><i>1.</i><span>Лицо, в отношении которого ведутся процессуальные действия, либо лица, являющиеся субъектами задержания потребовали идентификации или удостоверения личности.</span></span><span class="bnote"><b>Примечание</b>: идентификация лица, как государственного служащего, происходит путем закрепления на форме сотрудника идентификационных знаков.</span><span class="bnote"><b>Примечание</b>: удостоверение личности, как конкретного сотрудника, происходит путем ознакомления с его служебным удостоверением.</span><span class="bsub bsub-item"><i>2.</i><span>Государственный служащий, находящийся на момент требования при исполнении своих служебных обязанностей, предварительно удостоверив свою личность требует предоставить иного служащего его служебное удостоверение.</span></span><span class="bnote"><b>Примечание</b>: Если государственный служащий запросил удостоверение, то необходимо предоставить именно его.</span><span class="bsub bsub-item"><i>3.</i><span>Сотрудник проигнорировал нарушения гражданских лиц находясь при исполнении.</span></span><span class="bsub bsub-item"><i>4.</i><span>Указывают/приказывают/просят/предупреждают гражданское лицо.</span></span><span class="bnote"><b>Примечание</b>: каждый государственный служащий, исполняющий свои должностные обязанности, обязуется носить присвоенные ему идентификационные знаки в открытом виде.</span><span class="bnote"><b>Исключение</b>: Исключение: лица, не являющиеся сотрудниками правоохранительных ведомств или военной службы, не обязаны носить идентификационные знаки, однако обязаны иметь при себе служебное удостоверение. Правоохранительные ведомства имеют право не носить идентификационные знаки при работе под прикрытием.</span></div>
 </article>
 <article class="art" id="a-15">
   <div class="h"><a class="num" href="#a-15">15</a><span class="t">Государственная волна и рация департамента</span><span class="san"><span class="c-fine">50к$</span></span></div>
@@ -220,7 +224,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article>
 <article class="art" id="a-16">
   <div class="h"><a class="num" href="#a-16">16</a><span class="t">Руководство отдела структуры</span></div>
-  <div class="body">Руководство отдела<span class="bsub"><i>1.</i><span>Руководство отдела - высокопоставленные сотрудники организации, ответственные за управление и координацию деятельности определенного отдела/подразделения внутри организации.</span></span><span class="bsub"><i>2.</i><span>Руководителями отдела признаются:</span></span>2.1. Куратор отдела/подразделения.
+  <div class="body">Руководство отдела<span class="bsub bsub-item"><i>1.</i><span>Руководство отдела - высокопоставленные сотрудники организации, ответственные за управление и координацию деятельности определенного отдела/подразделения внутри организации.</span></span><span class="bsub bsub-item"><i>2.</i><span>Руководителями отдела признаются:</span></span>2.1. Куратор отдела/подразделения.
 2.2. Глава/Командир Отдела/подразделения.
 2.3. Заместитель Главы/Командира Отдела/подразделения.
 Авторство принадлежит: Ibragim Shepard

@@ -49,8 +49,12 @@ footer.site a{color:var(--muted)}
 .art .t{font-size:14px;font-weight:700}
 .art .body{margin-top:8px;font-size:13.5px;color:var(--soft);white-space:pre-wrap;max-width:72ch}
 .art .body .pen{color:var(--fine);font-weight:600}
-.art .body .bsub{display:flex;gap:9px;padding:3px 0 3px 8px}
-.art .body .bsub i{flex:none;min-width:24px;text-align:right;font:600 12px var(--mono);font-style:normal;color:var(--accent-hi);padding-top:1px}
+.art .body .bsub{display:flex;gap:9px}
+.art .body .bsub i{flex:none;text-align:right;font:600 12px var(--mono);font-style:normal;padding-top:1px}
+.art .body .bsub-part{padding:6px 0 5px 10px;margin-top:4px;border-left:2px solid var(--accent)}
+.art .body .bsub-part i{min-width:30px;color:var(--accent-hi)}
+.art .body .bsub-item{padding:3px 0 3px 34px}
+.art .body .bsub-item i{min-width:22px;color:var(--info)}
 .art .body .bnote{display:block;margin:9px 0;padding:9px 12px;background:var(--raised);border-radius:8px;font-size:12.5px;color:var(--muted)}
 .art .body .bnote b{color:var(--info)}
 .srv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:30px}
@@ -99,7 +103,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Раздел 2. Кабинет Губернатора</h2>
 <article class="art" id="a-5">
   <div class="h"><a class="num" href="#a-5">5</a><span class="t">Преемственность власти губернатора</span></div>
-  <div class="body">В случае отставки, недееспособности и в других случаях, когда Губернатор и Вице-губернатор не способны выполнять свои обязанности на полноценной основе, обязанности и полномочия Губернатора будут передаваться в соответствии с очередностью преемственности:<span class="bsub"><i>-</i><span>### Спикер Конгресса;</span></span><span class="bsub"><i>-</i><span>### Министр финансов;</span></span><span class="bsub"><i>-</i><span>### Министр обороны;</span></span><span class="bsub"><i>-</i><span>### Генеральный прокурор;</span></span><span class="bsub"><i>-</i><span>### Министр безопасности;</span></span><span class="bsub"><i>-</i><span>### Советник Губернатора.</span></span></div>
+  <div class="body">В случае отставки, недееспособности и в других случаях, когда Губернатор и Вице-губернатор не способны выполнять свои обязанности на полноценной основе, обязанности и полномочия Губернатора будут передаваться в соответствии с очередностью преемственности:<span class="bsub bsub-item"><i>-</i><span>### Спикер Конгресса;</span></span><span class="bsub bsub-item"><i>-</i><span>### Министр финансов;</span></span><span class="bsub bsub-item"><i>-</i><span>### Министр обороны;</span></span><span class="bsub bsub-item"><i>-</i><span>### Генеральный прокурор;</span></span><span class="bsub bsub-item"><i>-</i><span>### Министр безопасности;</span></span><span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора.</span></span></div>
 </article>
 <article class="art" id="a-9">
   <div class="h"><a class="num" href="#a-9">9</a><span class="t">Аннулирование актов вице-губернатора</span></div>
@@ -107,7 +111,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Раздел 3. Деятельность советника Губернатора</h2>
 <article class="art" id="a-2">
   <div class="h"><a class="num" href="#a-2">2</a><span class="t">Обязанности советника губернатора</span></div>
-  <div class="body">Основные направления деятельности и обязанности Советника Губернатора штата Сан-Андреас:<span class="bsub"><i>-</i><span>### Советник Губернатора обязан консультировать Губернатора по вопросам работы с общественностью;</span></span><span class="bsub"><i>-</i><span>### Советник Губернатора выступает от имени Губернатора в прессе, ведет встречи с представителями газет, радио и телевидения;</span></span><span class="bsub"><i>-</i><span>### Советник Губернатора может находится на плановых проверках Государственных структур;</span></span><span class="bnote"><b>Примечание</b>: Для проверки сотрудников правительства и их качества работы.</span><span class="bsub"><i>-</i><span>### Советник Губернатора имеет право осуществлять поиск кадров, на вакантные должности в Правительство;</span></span><span class="bsub"><i>-</i><span>### Советник Губернатора может проводить надзорную деятельность в отношении правительства на выполнение ими своих обязанностей.</span></span></div>
+  <div class="body">Основные направления деятельности и обязанности Советника Губернатора штата Сан-Андреас:<span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора обязан консультировать Губернатора по вопросам работы с общественностью;</span></span><span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора выступает от имени Губернатора в прессе, ведет встречи с представителями газет, радио и телевидения;</span></span><span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора может находится на плановых проверках Государственных структур;</span></span><span class="bnote"><b>Примечание</b>: Для проверки сотрудников правительства и их качества работы.</span><span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора имеет право осуществлять поиск кадров, на вакантные должности в Правительство;</span></span><span class="bsub bsub-item"><i>-</i><span>### Советник Губернатора может проводить надзорную деятельность в отношении правительства на выполнение ими своих обязанностей.</span></span></div>
 </article></section><section class="chapter"><h2>Раздел 1. Общие положения</h2>
 <article class="art" id="a-3">
   <div class="h"><a class="num" href="#a-3">3</a><span class="t">Полномочия заместителя генпрокурора</span></div>
@@ -115,7 +119,7 @@ h1.sec{font-size:26px;font-weight:800;padding-top:44px}
 </article></section><section class="chapter"><h2>Раздел 4. Полномочия офиса Генерального прокурора</h2>
 <article class="art" id="a-1">
   <div class="h"><a class="num" href="#a-1">1</a><span class="t">Надзор генерального прокурора</span></div>
-  <div class="body">Офис Генерального прокурора осуществляет надзор и руководство над:<span class="bsub"><i>-</i><span>### Исполнением законов органами исполнительной власти;</span></span><span class="bsub"><i>-</i><span>### Соответствием законам издаваемых органами исполнительной власти нормативно-правовых актов;</span></span><span class="bsub"><i>-</i><span>### Деятельностью структурных подразделений Министерства Юстиции;</span></span><span class="bsub"><i>-</i><span>### Уголовным преследованием государственных служащих, совершивших правонарушение;</span></span><span class="bsub"><i>-</i><span>### Авторизацией и исполнением ордеров на территории штата San Andreas;</span></span><span class="bsub"><i>-</i><span>### Работой сотрудников силовых государственных структур.</span></span>Примечание I: иные формы деятельности регламентируются нормативно-правовыми актами, принятыми на территории штата San-Andreas.
+  <div class="body">Офис Генерального прокурора осуществляет надзор и руководство над:<span class="bsub bsub-item"><i>-</i><span>### Исполнением законов органами исполнительной власти;</span></span><span class="bsub bsub-item"><i>-</i><span>### Соответствием законам издаваемых органами исполнительной власти нормативно-правовых актов;</span></span><span class="bsub bsub-item"><i>-</i><span>### Деятельностью структурных подразделений Министерства Юстиции;</span></span><span class="bsub bsub-item"><i>-</i><span>### Уголовным преследованием государственных служащих, совершивших правонарушение;</span></span><span class="bsub bsub-item"><i>-</i><span>### Авторизацией и исполнением ордеров на территории штата San Andreas;</span></span><span class="bsub bsub-item"><i>-</i><span>### Работой сотрудников силовых государственных структур.</span></span>Примечание I: иные формы деятельности регламентируются нормативно-правовыми актами, принятыми на территории штата San-Andreas.
 Примечание II:Заместители Генерального прокурора осуществляет исключительно надзор за деятельностью подразделения Министерства Юстиции - FIB.</div>
 </article>
 <article class="art" id="a-8">

@@ -538,7 +538,7 @@ function pinArticle(a) {
     url: 'pin.html?k=' + encodeURIComponent(key),
     width: 380, height: 300,
     x: 40 + (pinN % 4) * 30, y: 90 + (pinN % 4) * 30,
-    decorations: false, transparent: true, alwaysOnTop: true,
+    decorations: false, transparent: false, alwaysOnTop: true,
     skipTaskbar: true, resizable: true, shadow: false,
     title: 'Пин ' + a.num,
   });

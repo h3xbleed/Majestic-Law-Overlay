@@ -35,11 +35,15 @@ body {
   color: var(--text);
   overflow: hidden;
 }
-/* в Tauri окно прозрачное: рисуем только палитру (html тоже, иначе чёрные углы) */
-html.tauri, html.tauri body { background: transparent; }
-body.tauri { background: transparent; }
+/* в Tauri окно непрозрачное и сплошное; углы скругляет сама ОС (DWM) —
+   поэтому палитра заполняет окно без своего радиуса/тени, чтобы не было чёрных углов */
+html.tauri, html.tauri body { background: var(--bg-panel); }
 body.tauri .demo-backdrop { display: none; }
-body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height: 100vh; height: 100vh; animation: none; }
+body.tauri .palette {
+  left: 0; top: 0; transform: none;
+  width: 100vw; max-height: 100vh; height: 100vh;
+  border: none; border-radius: 0; box-shadow: none; animation: none;
+}
 
 /* демо-подложка (только для браузера; в Tauri окно прозрачное) */
 .demo-backdrop {
@@ -406,11 +410,14 @@ body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height
   border-left: 2px solid var(--accent);
 }
 .a-text .sub-part .sub-m { min-width: 30px; color: var(--accent-hi); }
-/* уровень 2 — подпункт (а/б/в, цифры): глубже вложен, спокойный маркер */
+/* уровень 2 — пункт (N), а), (а)): синий маркер */
 .a-text .sub-item { padding: 3px 0 3px 34px; }
 .a-text .sub-item .sub-m { min-width: 22px; color: var(--info); }
-/* уровень 3 — тире: ещё глубже, приглушённый маркер */
-.a-text .sub-dash { padding: 2px 0 2px 56px; }
+/* уровень 3 — вложенный номер (1.1): глубже, приглушённо-синий */
+.a-text .sub-two { padding: 3px 0 3px 54px; }
+.a-text .sub-two .sub-m { min-width: 30px; color: #6fa8dc; }
+/* уровень 4 — тире: самый глубокий, серый маркер */
+.a-text .sub-dash { padding: 2px 0 2px 72px; }
 .a-text .sub-dash .sub-m { min-width: 12px; color: var(--text-faint); }
 .a-text .a-note {
   display: block; margin: 9px 0; padding: 9px 12px;
@@ -424,7 +431,9 @@ body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height
 .pin-text .sub-part .sub-m { min-width: 26px; color: var(--accent-hi); }
 .pin-text .sub-item { padding: 2px 0 2px 26px; }
 .pin-text .sub-item .sub-m { min-width: 18px; color: var(--info); }
-.pin-text .sub-dash { padding: 1px 0 1px 42px; }
+.pin-text .sub-two { padding: 2px 0 2px 42px; }
+.pin-text .sub-two .sub-m { min-width: 26px; color: #6fa8dc; }
+.pin-text .sub-dash { padding: 1px 0 1px 56px; }
 .pin-text .sub-dash .sub-m { min-width: 10px; color: var(--text-faint); }
 .pin-text .a-note { display: block; margin: 7px 0; padding: 8px 10px; background: var(--bg-raised); border-radius: 7px; font-size: 11.5px; color: var(--text-muted); }
 .pin-text .a-note b { color: var(--info); }

@@ -379,16 +379,10 @@ function renderArticle(a) {
   const sameDoc = state.docs.find(dd => dd.id === a.docId);
   const resolve = num => sameDoc && sameDoc.articles.find(x => x.num === num);
   const text = el('div', 'a-text');
-  const safe = a.text.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   const xr = (pre, num) => (num !== a.num && resolve(num))
     ? `${pre}<a class="xref" data-num="${num}" title="Перейти к ст. ${num}">${num}</a>`
     : `${pre}<span class="hl-num">${num}</span>`;
-  text.innerHTML = safe
-    .replace(/(Наказание:[^\n]*)/g, '<span class="hl-pen">$1</span>')
-    // «статьёй 5», «ст. 12.8» — слово + номер (в т.ч. одиночный)
-    .replace(/(стать[яеиью][а-яё]*\s+|ст\.\s*)(\d+(?:\.\d+)*)(?=[\s.,;)])/gi, (m, pre, num) => xr(pre, num))
-    // голые составные номера: «12.8.1», «6.2»
-    .replace(/(^|\s)(\d+(?:\.\d+)+)(?=[\s.,;)])/g, (m, pre, num) => xr(pre, num));
+  text.innerHTML = window.formatLawText(a.text, {xr});
   text.addEventListener('click', (e) => {
     const x = e.target.closest('.xref');
     if (!x) return;
@@ -526,13 +520,12 @@ $('btnMin').addEventListener('click', () => { const w = tauriWin(); if (w) w.min
 $('btnClose').addEventListener('click', () => {
   const w = tauriWin();
   if (w) w.hide();
-  else { // демо в браузере: мягко спрятать и вернуть
-    const p = $('palette');
-    p.style.transition = 'opacity 140ms ease, transform 140ms ease';
-    p.style.opacity = '0'; p.style.transform = 'translateX(-50%) translateY(-8px)';
-    setTimeout(() => { p.style.opacity = ''; p.style.transform = ''; p.style.transition = ''; }, 900);
-  }
+  else location.href = '../index.html'; // веб: назад на лендинг
 });
+if (!IS_TAURI) {
+  $('btnMin').style.display = 'none'; // в браузере сворачивать нечего
+  if (window.self !== window.top) $('btnClose').style.display = 'none'; // во фрейме лендинга
+}
 
 /* пиновка статьи (Ctrl+P): мини-окно поверх экрана */
 let pinN = 0;

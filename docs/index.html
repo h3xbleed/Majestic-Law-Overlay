@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Majestic Law — все законы Majestic RP с мгновенным поиском</title>
+<meta name="description" content="Поиск по кодексам и законам 19 серверов Majestic RP: УК, АК, ДК, ПК. Наказания, розыск и залог — в один клик. Оверлей для игры и веб-версия.">
+
+<link rel="stylesheet" href="app/fonts.css">
+<style>
+:root{--bg:#0e0e0e;--panel:#141414;--raised:#1c1c1c;--active:#232323;--line:rgba(255,255,255,.1);
+--text:#f2f2f2;--soft:rgba(255,255,255,.75);--muted:#8e8e8e;--faint:#6b6e78;--accent:#e81c5a;--accent-hi:#ff2e6e;
+--fine:#ffc93a;--prison:#ff4d63;--info:#4aabff;--ok:#25b925;
+--font:'Montserrat','Segoe UI',sans-serif;--mono:'JetBrains Mono',Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6}
+a{color:var(--accent-hi);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:10;background:rgba(14,14,14,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+.brand{font-weight:800;font-style:italic;font-size:18px;color:var(--text)}
+.brand i{color:var(--accent);font-style:normal}
+.brand small{font-style:normal;font-weight:800;font-size:10px;letter-spacing:.24em;color:var(--soft);margin-left:8px}
+nav.site a{color:var(--muted);font-size:13px;font-weight:600;margin-left:22px}
+nav.site a:hover{color:var(--text);text-decoration:none}
+footer.site{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 40px;color:var(--faint);font-size:12px}
+footer.site a{color:var(--muted)}
+.pill{display:inline-flex;align-items:center;height:22px;padding:0 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:600;color:var(--muted)}
+.san{font:500 12px var(--mono);white-space:nowrap}
+.san span{margin-left:10px}
+.c-fine{color:var(--fine)}.c-prison{color:var(--prison)}.c-bail{color:var(--faint)}.c-lic{color:var(--info)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion){.reveal{transition:none;opacity:1;transform:none}}
+
+.hero{padding:84px 0 30px}
+.hero h1{font-size:52px;font-weight:800;line-height:1.08;letter-spacing:-.02em}
+.hero h1 i{color:var(--accent);font-style:italic}
+.hero .sub{max-width:560px;margin-top:18px;color:var(--soft);font-size:16px}
+.cta{margin-top:28px;display:flex;gap:12px}
+.btn{display:inline-flex;align-items:center;height:42px;padding:0 22px;border:1px solid var(--line);border-radius:8px;font-weight:700;font-size:13.5px;color:var(--text);transition:border-color .13s,background .13s,transform 90ms}
+.btn:hover{text-decoration:none;border-color:rgba(255,255,255,.25);background:var(--raised)}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-p:hover{background:var(--accent-hi);border-color:var(--accent-hi)}
+.stats{display:flex;gap:44px;margin-top:40px}
+.stats b{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
+.stats span{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:2px}
+.demo{margin-top:38px}
+.frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0b0c0e;box-shadow:0 30px 90px rgba(0,0,0,.5)}
+.frame iframe{display:block;width:100%;height:640px;border:0}
+.hint{text-align:center;color:var(--faint);font-size:12px;margin-top:12px}
+.feats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+.feat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px}
+.feat h3{font-size:15px;font-weight:800;margin-bottom:8px}
+.feat p{font-size:13px;color:var(--muted)}
+.dl{margin-top:64px}
+.dl h2{font-size:26px;font-weight:800}
+.dl p{max-width:600px;color:var(--soft);font-size:14px;margin-top:10px}
+.dl kbd{font:600 11px var(--mono);background:var(--raised);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:2px 6px}
+.dl .soon{color:var(--faint);font-size:12px}
+@media(max-width:760px){.hero h1{font-size:34px}.feats .wrap{grid-template-columns:1fr}.frame iframe{height:520px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">M<i>.</i><small>LAW</small></a>
+  <nav class="site">
+    <a href="app/">Приложение</a>
+    <a href="laws/">Законы</a>
+    <a href="changes/">Изменения</a>
+    <a href="trainer/">Тренажёр</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Все законы Majestic.<br><i>Мгновенно.</i></h1>
+  <p class="sub">Поиск по кодексам и законам всех 19 серверов — по номеру, слову или сленгу.
+  Наказания видны прямо в выдаче. База обновляется и знает, что изменилось.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="#download">Скачать оверлей</a>
+    <a class="btn" href="app/">Открыть в браузере</a>
+  </div>
+  <div class="stats">
+    <div><b>19</b><span>серверов</span></div>
+    <div><b>25 396</b><span>статей</span></div>
+    <div><b>06.07.2026</b><span>обновлено</span></div>
+  </div>
+</div></section>
+<section class="demo reveal"><div class="wrap">
+  <div class="frame"><iframe src="app/" title="Majestic Law" loading="lazy"></iframe></div>
+  <p class="hint">Это живое приложение — попробуй: «мокруха», «дк 39», «ограбление банка»</p>
+</div></section>
+<section class="feats"><div class="wrap">
+  <div class="feat reveal">
+    <h3>Понимает игрока</h3>
+    <p>«Ствол без лицензии» найдёт закон об обороте оружия, «мокруха» — статьи об убийстве.
+    Опечатки прощаются, номера статей — святое.</p>
+  </div>
+  <div class="feat reveal">
+    <h3>Наказание — сразу</h3>
+    <p>Штраф, срок, звёзды розыска и залог видны прямо в списке результатов.
+    Когда тебя держат на мушке — некогда кликать.</p>
+  </div>
+  <div class="feat reveal">
+    <h3>Что изменилось</h3>
+    <p>База сравнивает себя с прошлыми версиями и показывает изменения по статьям:
+    новые составы, правки санкций. <a href="changes/">Смотри ченджлог</a>.</p>
+  </div>
+</div></section>
+<section id="download" class="dl reveal"><div class="wrap">
+  <h2>Оверлей поверх игры</h2>
+  <p>Windows-приложение: глобальный хоткей <kbd>Ctrl+Shift+L</kbd>, пиновка статей поверх экрана,
+  работа без интернета. Без инъекций в игру — обычное окно, GTA в режиме «оконный без рамки».</p>
+  <p class="soon">Сборка появится в releases на GitHub.</p>
+</div></section>
+<footer class="site"><div class="wrap">
+  Majestic Law — неофициальный справочник законов Majestic RP. Тексты законов принадлежат их авторам на форуме проекта.<br>
+  База — CC BY-NC-SA 4.0 · Приложение — GPLv3 · Не связан с администрацией Majestic RP.
+</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

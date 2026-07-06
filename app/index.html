@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Majestic Law — оверлей</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- демо-подложка: имитация игры под оверлеем (в Tauri её нет — окно прозрачное) -->
+  <div class="demo-backdrop" aria-hidden="true"></div>
+
+  <div class="palette" id="palette">
+    <header class="p-head" data-tauri-drag-region>
+      <div class="head-left">
+        <button class="nav-btn" id="navBack" title="Назад (Alt+←)" disabled>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8.5 2.5 4.5 6.5l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="nav-btn" id="navFwd" title="Вперёд (Alt+→)" disabled>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="m4.5 2.5 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="brand"><span class="brand-m">M</span><span class="brand-dot">.</span><span class="brand-t">LAW</span></div>
+      </div>
+      <div class="head-right">
+        <span class="pill pill-fresh" id="freshness" title="Дата снапшота базы">база</span>
+        <div class="server-dd" id="serverDD">
+          <button class="server-btn" id="serverBtn">
+            <span id="serverName">Detroit</span>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </button>
+          <div class="server-menu" id="serverMenu" hidden></div>
+        </div>
+        <button class="win-btn" id="btnMin" title="Свернуть">
+          <svg width="11" height="11" viewBox="0 0 11 11"><path d="M2 5.5h7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="win-btn win-close" id="btnClose" title="Скрыть (Ctrl+Shift+L)">
+          <svg width="11" height="11" viewBox="0 0 11 11"><path d="m2.5 2.5 6 6m0-6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="p-search">
+      <svg class="s-icon" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6.2" stroke="currentColor" stroke-width="1.6"/><path d="M13.8 13.8 17.5 17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+        placeholder="Статья, слово или сленг: «мокруха», «дк 39», «6.3»…">
+      <span class="s-hint" id="searchStats"></span>
+    </div>
+
+    <nav class="p-filters" id="filters"></nav>
+
+    <main class="p-body">
+      <ul class="results" id="results"></ul>
+      <article class="article" id="article" hidden></article>
+      <div class="empty" id="empty" hidden>
+        <div class="empty-num">§</div>
+        <p>Ничего не нашлось. Попробуй синонимом — база знает сленг:<br>«мокруха», «пушка», «дм», «травка»…</p>
+      </div>
+    </main>
+
+    <footer class="p-foot">
+      <span class="f-keys">
+        <kbd class="key">↑↓</kbd> навигация
+        <kbd class="key">Enter</kbd> открыть
+        <kbd class="key">Tab</kbd> кодекс
+        <kbd class="key">Ctrl+P</kbd> пин
+        <kbd class="key">Esc</kbd> назад
+      </span>
+      <span class="f-meta" id="meta"></span>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="search-engine.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

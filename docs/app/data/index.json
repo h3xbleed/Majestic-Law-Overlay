@@ -1,0 +1,119 @@
+{
+ "generated_at": "2026-07-06T01:20:24.875Z",
+ "servers": [
+  {
+   "server": "Atlanta",
+   "scraped_at": "2026-07-06T01:08:20.351Z",
+   "documents": 36,
+   "articles": 1002
+  },
+  {
+   "server": "Boston",
+   "scraped_at": "2026-07-06T01:11:34.630Z",
+   "documents": 42,
+   "articles": 1811
+  },
+  {
+   "server": "Chicago",
+   "scraped_at": "2026-07-06T01:07:30.157Z",
+   "documents": 36,
+   "articles": 1023
+  },
+  {
+   "server": "Dallas",
+   "scraped_at": "2026-07-06T01:10:57.645Z",
+   "documents": 39,
+   "articles": 1443
+  },
+  {
+   "server": "Denver",
+   "scraped_at": "2026-07-06T01:13:13.142Z",
+   "documents": 36,
+   "articles": 1416
+  },
+  {
+   "server": "Detroit",
+   "scraped_at": "2026-07-06T01:07:01.886Z",
+   "documents": 33,
+   "articles": 1800
+  },
+  {
+   "server": "Houston",
+   "scraped_at": "2026-07-06T01:12:04.325Z",
+   "documents": 40,
+   "articles": 1895
+  },
+  {
+   "server": "Las Vegas",
+   "scraped_at": "2026-07-06T01:10:10.551Z",
+   "documents": 32,
+   "articles": 1369
+  },
+  {
+   "server": "Los Angeles",
+   "scraped_at": "2026-07-06T01:09:27.286Z",
+   "documents": 33,
+   "articles": 1292
+  },
+  {
+   "server": "Memphis",
+   "scraped_at": "2026-07-06T01:14:26.059Z",
+   "documents": 34,
+   "articles": 1169
+  },
+  {
+   "server": "Miami",
+   "scraped_at": "2026-07-06T01:09:43.380Z",
+   "documents": 24,
+   "articles": 989
+  },
+  {
+   "server": "New York",
+   "scraped_at": "2026-07-06T01:06:42.110Z",
+   "documents": 38,
+   "articles": 1476
+  },
+  {
+   "server": "Orlando",
+   "scraped_at": "2026-07-06T01:14:00.341Z",
+   "documents": 34,
+   "articles": 1225
+  },
+  {
+   "server": "Phoenix",
+   "scraped_at": "2026-07-06T01:12:56.339Z",
+   "documents": 28,
+   "articles": 1401
+  },
+  {
+   "server": "Portland",
+   "scraped_at": "2026-07-06T01:13:42.219Z",
+   "documents": 34,
+   "articles": 1174
+  },
+  {
+   "server": "San Diego",
+   "scraped_at": "2026-07-06T01:08:44.981Z",
+   "documents": 39,
+   "articles": 1021
+  },
+  {
+   "server": "San Francisco",
+   "scraped_at": "2026-07-06T01:08:00.403Z",
+   "documents": 30,
+   "articles": 1518
+  },
+  {
+   "server": "Seattle",
+   "scraped_at": "2026-07-06T01:12:35.659Z",
+   "documents": 27,
+   "articles": 1580
+  },
+  {
+   "server": "Washington",
+   "scraped_at": "2026-07-06T01:10:28.619Z",
+   "documents": 32,
+   "articles": 792
+  }
+ ]
+}

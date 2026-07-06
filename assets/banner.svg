@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230">
+  <defs>
+    <radialGradient id="g" cx="78%" cy="115%" r="80%">
+      <stop offset="0%" stop-color="#e81c5a" stop-opacity=".16"/>
+      <stop offset="60%" stop-color="#e81c5a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="230" rx="18" fill="#0e0e0e"/>
+  <rect width="960" height="230" rx="18" fill="url(#g)"/>
+  <rect x=".5" y=".5" width="959" height="229" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
+  <text x="72" y="128" font-family="Montserrat, Segoe UI, sans-serif" font-size="64" font-weight="800" font-style="italic" fill="#f2f2f2">Majestic<tspan fill="#e81c5a">.</tspan>Law</text>
+  <text x="76" y="166" font-family="Montserrat, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#8e8e8e" letter-spacing="1">поиск по законам всех серверов Majestic RP — в игре и в браузере</text>
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="12" fill="#6b6e78">
+    <rect x="708" y="84" width="180" height="30" rx="8" fill="#1c1c1c" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="722" y="103" fill="#8e8e8e">Ctrl + Shift + L</text>
+    <rect x="708" y="122" width="180" height="30" rx="8" fill="#1c1c1c" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="722" y="141"><tspan fill="#e81c5a">›</tspan> мокруха</text>
+  </g>
+</svg>

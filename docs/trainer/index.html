@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тренажёр по законам Majestic RP — подготовка к собеседованию | Majestic Law</title>
+<meta name="description" content="Тест на знание УК, АК и ДК серверов Majestic RP. Готовься к собеседованию в LSPD, FIB и другие госструктуры.">
+
+<link rel="stylesheet" href="../app/fonts.css">
+<style>
+:root{--bg:#0e0e0e;--panel:#141414;--raised:#1c1c1c;--active:#232323;--line:rgba(255,255,255,.1);
+--text:#f2f2f2;--soft:rgba(255,255,255,.75);--muted:#8e8e8e;--faint:#6b6e78;--accent:#e81c5a;--accent-hi:#ff2e6e;
+--fine:#ffc93a;--prison:#ff4d63;--info:#4aabff;--ok:#25b925;
+--font:'Montserrat','Segoe UI',sans-serif;--mono:'JetBrains Mono',Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6}
+a{color:var(--accent-hi);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:10;background:rgba(14,14,14,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+.brand{font-weight:800;font-style:italic;font-size:18px;color:var(--text)}
+.brand i{color:var(--accent);font-style:normal}
+.brand small{font-style:normal;font-weight:800;font-size:10px;letter-spacing:.24em;color:var(--soft);margin-left:8px}
+nav.site a{color:var(--muted);font-size:13px;font-weight:600;margin-left:22px}
+nav.site a:hover{color:var(--text);text-decoration:none}
+footer.site{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 40px;color:var(--faint);font-size:12px}
+footer.site a{color:var(--muted)}
+.pill{display:inline-flex;align-items:center;height:22px;padding:0 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:600;color:var(--muted)}
+.san{font:500 12px var(--mono);white-space:nowrap}
+.san span{margin-left:10px}
+.c-fine{color:var(--fine)}.c-prison{color:var(--prison)}.c-bail{color:var(--faint)}.c-lic{color:var(--info)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion){.reveal{transition:none;opacity:1;transform:none}}
+
+main.wrap{max-width:640px}
+main.wrap h1{font-size:26px;font-weight:800;padding-top:44px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:20px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+select{background:var(--raised);border:1px solid var(--line);border-radius:8px;color:var(--text);font:600 12px var(--font);padding:7px 10px;outline:none}
+#score{font:600 13px var(--mono);color:var(--muted)}
+#q{font-size:16px;line-height:1.5;min-height:52px}
+#q b{color:var(--accent-hi)}
+#answers{display:grid;gap:8px;margin-top:16px}
+.ans{background:var(--raised);border:1px solid var(--line);border-radius:9px;color:var(--soft);font:500 13px var(--font);padding:11px 14px;text-align:left;cursor:pointer;transition:border-color .12s,background .12s}
+.ans:hover:not(:disabled){border-color:rgba(255,255,255,.28)}
+.ans.good{border-color:var(--ok);color:var(--text)}
+.ans.bad{border-color:var(--prison)}
+.note{color:var(--faint);font-size:12px;margin-top:14px}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="../index.html">M<i>.</i><small>LAW</small></a>
+  <nav class="site">
+    <a href="../app/">Приложение</a>
+    <a href="../laws/">Законы</a>
+    <a href="../changes/">Изменения</a>
+    <a href="../trainer/">Тренажёр</a>
+  </nav>
+</div></header>
+<main class="wrap"><h1>Тренажёр</h1>
+<div class="panel">
+  <div class="top"><select id="srv"></select><span id="score">0 / 0</span></div>
+  <div id="q"></div>
+  <div id="answers"></div>
+  <p class="note">Вопросы собираются из актуальной базы: наказания, номера статей. Идеально перед собесом в гос.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  Majestic Law — неофициальный справочник законов Majestic RP. Тексты законов принадлежат их авторам на форуме проекта.<br>
+  База — CC BY-NC-SA 4.0 · Приложение — GPLv3 · Не связан с администрацией Majestic RP.
+</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const SERVERS=["Atlanta","Boston","Chicago","Dallas","Denver","Detroit","Houston","Las Vegas","Los Angeles","Memphis","Miami","New York","Orlando","Phoenix","Portland","San Diego","San Francisco","Seattle","Washington"];
+const $=id=>document.getElementById(id);
+let data=null,score=0,total=0,streak=0,cur=null;
+const fmtMoney=n=>n>=1000?(n/1000)+'к$':n+'$';
+function fmtSan(s){if(!s)return 'без наказания';const p=[];
+if(s.fine_max!==undefined)p.push('штраф '+(s.fine_min!==undefined&&s.fine_min!==s.fine_max?fmtMoney(s.fine_min)+'–':'')+fmtMoney(s.fine_max));
+if(s.prison_max!==undefined)p.push((s.prison_min?s.prison_min+'–':'до ')+s.prison_max+' '+(s.prison_unit==='месяц'?'мес':(s.prison_unit==='минут'?'мин':'лет')));
+if(s.wanted_stars)p.push(s.wanted_stars+'★ розыск');
+if(s.bail!==undefined)p.push('залог '+fmtMoney(s.bail));else if(s.bail_denied)p.push('без залога');
+if(s.license_revoke)p.push('лишение прав');
+return p.join(', ')||'без наказания'}
+const shuffle=a=>a.sort(()=>Math.random()-.5);
+async function load(){const srv=$('srv').value;
+$('q').textContent='загрузка…';
+const d=await(await fetch('../app/data/'+encodeURIComponent(srv)+'.json')).json();
+const arts=[];for(const doc of d.documents)for(const ch of doc.chapters)for(const a of ch.articles)if(a.sanctions&&a.title)arts.push({...a,doc:doc.title});
+data=arts;score=0;total=0;streak=0;next()}
+function next(){if(!data||data.length<8){$('q').textContent='мало данных';return}
+const mode=Math.random()<.5;
+const pool=shuffle([...data]).slice(0,4);
+cur={correct:0};
+if(mode){ // наказание по статье
+  const a=pool[0];
+  $('q').innerHTML='Что грозит по статье <b>'+a.num+' «'+a.title+'»</b>?';
+  const answers=pool.map(x=>fmtSan(x.sanctions));
+  render(answers,0)
+}else{ // статья по описанию
+  const a=pool[0];
+  $('q').innerHTML='Какая статья: <b>«'+a.title+'»</b> ('+fmtSan(a.sanctions)+')?';
+  const answers=pool.map(x=>'ст. '+x.num);
+  render(answers,0)}
+}
+function render(answers,correctIdx){
+const order=shuffle(answers.map((t,i)=>({t,ok:i===correctIdx})));
+const box=$('answers');box.textContent='';
+order.forEach(o=>{const b=document.createElement('button');b.className='ans';b.textContent=o.t;
+b.onclick=()=>{total++;
+if(o.ok){score++;streak++;b.classList.add('good')}else{streak=0;b.classList.add('bad');[...box.children].find(x=>x.textContent===answers[correctIdx])?.classList.add('good')}
+[...box.children].forEach(x=>x.disabled=true);
+$('score').textContent=score+' / '+total+(streak>2?' · серия '+streak:'');
+setTimeout(next,900)};
+box.append(b)})}
+$('srv').innerHTML=SERVERS.map(s=>'<option'+(s==='Detroit'?' selected':'')+'>'+s+'</option>').join('');
+$('srv').onchange=load;load();
+</script>
+</body>
+</html>

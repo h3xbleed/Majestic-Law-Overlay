@@ -335,7 +335,7 @@ function renderArticle(a) {
   // сравнить эту статью на всех серверах
   const cmp = el('button', 'a-link');
   cmp.title = 'Сравнить на всех серверах';
-  cmp.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5h8m0 0L7.5 2M10 4.5 7.5 7M12 9.5H4m0 0L6.5 7M4 9.5 6.5 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  cmp.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 4.5h9M9 2l2.5 2.5L9 7M11.5 9.5h-9M5 7 2.5 9.5 5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   cmp.addEventListener('click', () => openCompare(a));
   head.append(cmp);
   // поделиться ссылкой (в вебе — всегда; в оверлее — если задан shareBase)
@@ -343,7 +343,7 @@ function renderArticle(a) {
   if (shareBase) {
     const share = el('button', 'a-link');
     share.title = 'Скопировать ссылку на статью';
-    share.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="3.5" cy="7" r="1.8" stroke="currentColor" stroke-width="1.2"/><circle cx="10.5" cy="3.2" r="1.8" stroke="currentColor" stroke-width="1.2"/><circle cx="10.5" cy="10.8" r="1.8" stroke="currentColor" stroke-width="1.2"/><path d="M5.2 6.2 8.8 4M5.2 7.8 8.8 10" stroke="currentColor" stroke-width="1.2"/></svg>';
+    share.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="3.4" cy="7" r="1.7" stroke="currentColor" stroke-width="1.4"/><circle cx="10.6" cy="3" r="1.7" stroke="currentColor" stroke-width="1.4"/><circle cx="10.6" cy="11" r="1.7" stroke="currentColor" stroke-width="1.4"/><path d="M4.9 6.2 9.1 3.8M4.9 7.8l4.2 2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
     share.addEventListener('click', () => {
       navigator.clipboard.writeText(shareBase + articleHash(a));
       share.style.color = 'var(--ok)';
@@ -583,7 +583,7 @@ document.addEventListener('keydown', (e) => {
 let debTimer;
 $('q').addEventListener('input', () => { clearTimeout(debTimer); debTimer = setTimeout(() => navigate(), 25); });
 
-if (window.__TAURI__) document.body.classList.add('tauri');
+if (window.__TAURI__) { document.body.classList.add('tauri'); document.documentElement.classList.add('tauri'); }
 $('serverName').textContent = state.server;
 renderFilters();
 loadServer(state.server);

@@ -35,7 +35,8 @@ body {
   color: var(--text);
   overflow: hidden;
 }
-/* в Tauri окно прозрачное: рисуем только палитру */
+/* в Tauri окно прозрачное: рисуем только палитру (html тоже, иначе чёрные углы) */
+html.tauri, html.tauri body { background: transparent; }
 body.tauri { background: transparent; }
 body.tauri .demo-backdrop { display: none; }
 body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height: 100vh; height: 100vh; animation: none; }
@@ -383,6 +384,23 @@ body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height
 }
 .results.in-doc .r-doc { display: none; }   /* глава уже видна заголовком секции */
 .results.in-doc .row { height: 38px; }      /* компактнее без второй строки */
+
+.a-text .sub { display: flex; gap: 9px; padding: 3px 0 3px 8px; }
+.a-text .sub .sub-m {
+  flex: none; min-width: 24px; text-align: right;
+  font: 600 11.5px var(--mono); font-style: normal;
+  color: var(--accent-hi); padding-top: 2px;
+}
+.a-text .a-note {
+  display: block; margin: 9px 0; padding: 9px 12px;
+  background: var(--bg-raised); border-radius: 8px;
+  font-size: 12.5px; color: var(--text-muted);
+}
+.a-text .a-note b { color: var(--info); }
+.pin-text .sub { display: flex; gap: 8px; padding: 2px 0 2px 4px; }
+.pin-text .sub .sub-m { flex: none; min-width: 20px; text-align: right; font: 600 10.5px var(--mono); font-style: normal; color: var(--accent-hi); padding-top: 2px; }
+.pin-text .a-note { display: block; margin: 7px 0; padding: 8px 10px; background: var(--bg-raised); border-radius: 7px; font-size: 11.5px; color: var(--text-muted); }
+.pin-text .a-note b { color: var(--info); }
 
 /* сравнение по серверам */
 .cmp-list { padding: 8px 12px 16px; }

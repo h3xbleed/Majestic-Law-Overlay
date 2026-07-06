@@ -1,32 +1,50 @@
 // форматирование текста статьи: подпункты, примечания, наказания.
-// используется палитрой и пином; та же логика продублирована в генераторе веб-страниц.
+// используется палитрой и пином; та же логика продублирована в генераторе веб-страниц (build-web.js).
 (function () {
   'use strict';
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
-  // маркер списка + текст на одной строке
-  const SUB_RE = /^\s*(ч\.\s*\d+(?:\.\d+)?|п\.\s*\d+(?:\.\d+)?|\([а-яa-z0-9]{1,3}\)|[а-яa-z]\)|\d{1,2}[.)]|[-–•])\s+(.+)$/i;
-  // одинокий маркер на своей строке (текст на следующей): «1)», «а)», «(б)»
-  const LONE_RE = /^\s*(\d{1,2}[.)]|[а-яa-z]\)|\([а-яa-z0-9]{1,3}\))\s*$/i;
-  const MARK_START = /^\s*(ч\.|п\.|\d{1,2}[.)]|[а-яa-z]\)|[-–•]|\()/i;
-  const subTier = mk => /^[чп]\./i.test(mk) ? 'sub-part' : (/^[-–•]/.test(mk) ? 'sub-dash' : 'sub-item');
+  // Разбор ведущего маркера строки. Покрывает все форматы из базы:
+  //   Часть N / ч. N / Пункт N / п. N        → уровень «part»  (структурный)
+  //   N) / А) / (А) / (N) / Подпункт N        → уровень «item»  (пункт)
+  //   N.N) / N.N.N)                           → уровень «sub»   (вложенный пункт)
+  //   - – •                                   → уровень «dash»  (перечисление)
+  // Возвращает {mk, rest, tier} или null.
+  function parseMarker(line) {
+    const t = line.replace(/^[\s*]+/, '');
+    let m;
+    if ((m = t.match(/^((?:Часть|Пункт|Подпункт)\s+\d+(?:\.\d+)?|[чп]\.\s*\d+(?:\.\d+)?)[.):]?\s*(.*)$/i))) {
+      const isSub = /подпункт/i.test(m[1]);
+      return { mk: m[1].replace(/\s+/g, ' '), rest: m[2], tier: isSub ? 'sub-item' : 'sub-part' };
+    }
+    if ((m = t.match(/^(\d+\.\d+(?:\.\d+)?[.)])\s*(.*)$/)))       return { mk: m[1], rest: m[2], tier: 'sub-two' };
+    if ((m = t.match(/^(\d{1,2}[.)])\s+(.*)$/)))                 return { mk: m[1], rest: m[2], tier: 'sub-item' };
+    if ((m = t.match(/^(\d{1,2}[.)])\s*$/)))                     return { mk: m[1], rest: '',   tier: 'sub-item' };
+    if ((m = t.match(/^(\([а-яёa-z0-9]{1,3}\))\s*(.*)$/i)))      return { mk: m[1], rest: m[2], tier: 'sub-item' };
+    if ((m = t.match(/^([а-яёa-z]\))\s+(.*)$/i)))               return { mk: m[1], rest: m[2], tier: 'sub-item' };
+    if ((m = t.match(/^([а-яёa-z]\))\s*$/i)))                   return { mk: m[1], rest: '',   tier: 'sub-item' };
+    if ((m = t.match(/^([-–—•])\s+(.*)$/)))                      return { mk: '–',  rest: m[2], tier: 'sub-dash' };
+    return null;
+  }
 
-  // подготовка строк: склейка одиноких маркеров с их текстом + схлопывание дублей подряд
+  // подготовка строк: чистка markdown-решёток, склейка одиноких маркеров, схлопывание дублей
+  const stripHash = s => s.replace(/(^|\s)#{1,6}(?=\s|$)/g, '$1');
   function normLines(raw) {
-    const src = raw.split('\n');
-    const lines = [];
+    const src = raw.split('\n').map(stripHash);
+    const out = [];
     for (let i = 0; i < src.length; i++) {
       let l = src[i];
-      if (LONE_RE.test(l)) {
+      const mk = parseMarker(l);
+      // маркер без текста на своей строке — подтянуть следующую строку, если она не маркер
+      if (mk && !mk.rest.trim()) {
         let j = i + 1;
         while (j < src.length && !src[j].trim()) j++;
-        // склеиваем, только если следующая строка — обычный текст (не новый маркер)
-        if (j < src.length && !MARK_START.test(src[j])) { l = l.trim() + ' ' + src[j].trim(); i = j; }
+        if (j < src.length && !parseMarker(src[j])) { l = l.trim() + ' ' + src[j].trim(); i = j; }
       }
-      if (lines.length && l.trim() && l.trim() === lines[lines.length - 1].trim()) continue;
-      lines.push(l);
+      if (out.length && l.trim() && l.trim() === out[out.length - 1].trim()) continue; // дубль подряд
+      out.push(l);
     }
-    return lines;
+    return out;
   }
 
   // opts.xr — колбэк для кликабельных отсылок (только в палитре)
@@ -44,15 +62,14 @@
     const out = [];
     let buf = [];
     const flush = () => { if (buf.length) { out.push(inline(esc(buf.join('\n')))); buf = []; } };
-    const lines = normLines(raw);
-    for (const line of lines) {
-      let m;
+    for (const line of normLines(raw)) {
+      let m, mk;
       if ((m = line.match(/^\s*\*{0,3}(Примечание|Исключение|Важно)\s*[:.](.*)$/i))) {
         flush();
         out.push(`<span class="a-note"><b>${m[1]}</b>: ${inline(esc(m[2].replace(/\*+$/, '').trim()))}</span>`);
-      } else if ((m = line.match(SUB_RE))) {
+      } else if ((mk = parseMarker(line)) && mk.rest.trim()) {
         flush();
-        out.push(`<span class="sub ${subTier(m[1])}"><i class="sub-m">${esc(m[1])}</i><span>${inline(esc(m[2]))}</span></span>`);
+        out.push(`<span class="sub ${mk.tier}"><i class="sub-m">${esc(mk.mk)}</i><span>${inline(esc(mk.rest))}</span></span>`);
       } else {
         buf.push(line);
       }

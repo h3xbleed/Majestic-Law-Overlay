@@ -313,8 +313,17 @@ body.tauri .palette { left: 0; top: 0; transform: none; width: 100vw; max-height
   color: var(--text-faint); margin-top: 2px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.a-link { flex: none; color: var(--text-faint); transition: color var(--t); display: inline-flex; }
-.a-link:hover { color: var(--accent); }
+/* иконки-действия в шапке статьи: сравнить / поделиться / на форум — единый стиль */
+.a-link {
+  flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px;
+  background: none; border: 1px solid transparent; border-radius: 7px;
+  color: var(--text-faint); cursor: pointer;
+  transition: background var(--t), color var(--t), transform 90ms ease;
+}
+.a-link:hover { background: var(--bg-raised); color: var(--text); text-decoration: none; }
+.a-link:active { transform: scale(.92); }
 
 .a-sanctions {
   display: flex; flex-wrap: wrap; gap: 8px;

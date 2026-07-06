@@ -18,12 +18,12 @@
         "minHeight": 420,
         "center": true,
         "decorations": false,
-        "transparent": true,
+        "transparent": false,
         "alwaysOnTop": true,
         "skipTaskbar": true,
         "resizable": true,
         "visible": true,
-        "shadow": false
+        "shadow": true
       }
     ],
     "security": {

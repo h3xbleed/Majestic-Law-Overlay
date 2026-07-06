@@ -9,6 +9,31 @@ use tauri::{
 };
 use tauri_plugin_global_shortcut::{Builder as ShortcutBuilder, ShortcutState};
 
+// Скругляем углы окна средствами Windows 11 (DWM) — окно непрозрачное,
+// поэтому чёрных артефактов в углах нет, ОС сама режет по радиусу.
+#[cfg(windows)]
+fn round_corners<R: tauri::Runtime>(win: &tauri::WebviewWindow<R>) {
+    use windows::Win32::Foundation::HWND;
+    use windows::Win32::Graphics::Dwm::{
+        DwmSetWindowAttribute, DWMWA_WINDOW_CORNER_PREFERENCE, DWMWCP_ROUND,
+    };
+    if let Ok(handle) = win.hwnd() {
+        let hwnd = HWND(handle.0 as _);
+        let pref = DWMWCP_ROUND;
+        unsafe {
+            let _ = DwmSetWindowAttribute(
+                hwnd,
+                DWMWA_WINDOW_CORNER_PREFERENCE,
+                &pref as *const _ as *const _,
+                std::mem::size_of_val(&pref) as u32,
+            );
+        }
+    }
+}
+
+#[cfg(not(windows))]
+fn round_corners<R: tauri::Runtime>(_win: &tauri::WebviewWindow<R>) {}
+
 fn toggle_main(app: &AppHandle) {
     if let Some(w) = app.get_webview_window("main") {
         if w.is_visible().unwrap_or(false) {
@@ -35,6 +60,9 @@ fn main() {
                 .build(),
         )
         .setup(|app| {
+            if let Some(w) = app.get_webview_window("main") {
+                round_corners(&w);
+            }
             let toggle = MenuItem::with_id(app, "toggle", "Показать / Скрыть", true, None::<&str>)?;
             let quit = MenuItem::with_id(app, "quit", "Выход", true, None::<&str>)?;
             let menu = Menu::with_items(app, &[&toggle, &quit])?;
